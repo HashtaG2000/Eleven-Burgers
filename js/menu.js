@@ -86,7 +86,7 @@ const menuObserver = new IntersectionObserver((entries) => {
 menuItems.forEach(item => {
     item.style.opacity = '0'
     item.style.transform = 'translateY(30px)'
-    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
+    item.style.transition = 'opacity 0.4s ease, transform 0.4s ease'
     menuObserver.observe(item)
 })
 
@@ -355,23 +355,23 @@ const addCustomAnimations = () => {
 const sr = ScrollReveal({
     origin: 'bottom',
     distance: '60px',
-    duration: 2500,
-    delay: 300,
+    duration: 800,
+    delay: 150,
     reset: false,
 })
 
 // Hero section
-sr.reveal(`.hero__title`, {delay: 200, distance: '50px', origin: 'top'})
-sr.reveal(`.hero__description`, {delay: 400})
-sr.reveal(`.hero__special`, {delay: 600, distance: '80px'})
+sr.reveal(`.hero__title`, {delay: 100, distance: '50px', origin: 'top'})
+sr.reveal(`.hero__description`, {delay: 200})
+sr.reveal(`.hero__special`, {delay: 300, distance: '80px'})
 
 // Menu sections
-sr.reveal(`.section__title`, {delay: 200, distance: '30px', origin: 'top'})
-sr.reveal(`.category__title`, {delay: 300, distance: '30px', origin: 'top'})
-sr.reveal(`.menu__item`, {delay: 400, interval: 100})
-sr.reveal(`.addon__item`, {delay: 200, interval: 50})
-sr.reveal(`.drink__item`, {delay: 200, interval: 50})
-sr.reveal(`.spirit__item`, {delay: 200, interval: 50})
+sr.reveal(`.section__title`, {delay: 100, distance: '30px', origin: 'top'})
+sr.reveal(`.category__title`, {delay: 150, distance: '30px', origin: 'top'})
+sr.reveal(`.menu__item`, {delay: 200, interval: 50})
+sr.reveal(`.addon__item`, {delay: 100, interval: 25})
+sr.reveal(`.drink__item`, {delay: 100, interval: 25})
+sr.reveal(`.spirit__item`, {delay: 100, interval: 25})
 
 // Footer
 sr.reveal(`.footer__logo`, {delay: 200})
