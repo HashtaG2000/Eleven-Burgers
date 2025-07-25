@@ -263,7 +263,7 @@ img {
   max-width: initial;
   width: 320px;
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -0.5rem;
 }
 .home__potato-1{
   left: -1.5rem;
@@ -276,7 +276,7 @@ img {
 }
 .home__tomato-1{
 width: 40px;
-top: -1rem;
+top: 0rem;
 right: 6rem;
 }
 .home__tomato-2{
@@ -313,11 +313,17 @@ right: 6rem;
   position: relative;
   min-height: 600px;
 }
+
+.events .section__title {
+  position: relative;
+  z-index: 10;
+}
 .events__container {
   padding-block: 3rem;
   position: relative;
   z-index: 2;
 }
+
 .events__content {
   text-align: center;
   position: relative;
@@ -496,7 +502,7 @@ right: 6rem;
   right: 0;
   width: 120px;
   margin: 0 auto;
-  filter: var(--shadow-small-img);
+  filter: var(--shadow-big-img);
   transition: transform .4s;
 }
 .popular__title{
@@ -577,6 +583,80 @@ right: 6rem;
 }
 .contact__info{
   font-style: normal;
+}
+
+.contact__info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: var(--small-font-size);
+}
+
+.contact__info table th {
+  color: var(--first-color);
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: var(--font-semi-bold);
+  font-family: var(--second-font);
+}
+
+.contact__info table td {
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact__info table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact__info table th:first-child,
+.contact__info table td:first-child {
+  font-weight: var(--font-medium);
+}
+
+@media screen and (max-width: 768px) {
+  .contact__info table {
+    font-size: 0.8rem;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .contact__info table thead,
+  .contact__info table tbody,
+  .contact__info table tr {
+    display: block;
+  }
+  
+  .contact__info table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    gap: 2rem;
+  }
+  
+  .contact__info table th,
+  .contact__info table td {
+    display: block;
+    padding: 0.3rem 0;
+    text-align: center;
+    border: none;
+    min-width: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact__info table {
+    font-size: 0.75rem;
+  }
+  
+  .contact__info table tr {
+    padding: 0.25rem 0;
+  }
 }
 .contact__image{
   justify-self: center;
@@ -731,6 +811,7 @@ right: 6rem;
   .events__confetti{
     display: none;
   }
+  
 }
 
 /* For small devices */
@@ -790,6 +871,7 @@ right: 6rem;
     right: 0.5rem;
     bottom: 0.5rem;
   }
+  
   .popular__container{
     grid-template-columns: 160px;
     justify-content: center;
@@ -933,6 +1015,7 @@ right: 6rem;
   .events__bottle-img{
     width: 100px;
   }
+  
   .events__offer-title{
     font-size: 3.5rem;
   }

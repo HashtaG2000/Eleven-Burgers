@@ -89,3 +89,4 @@ sr.reveal(`.contact__data`, {origin: 'right'})
 sr.reveal(`.popular__card`, {interval: 100})
 
 
+
