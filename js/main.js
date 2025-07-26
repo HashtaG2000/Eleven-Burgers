@@ -71,22 +71,80 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2500,
-    delay: 300,
+    duration: 600,
+    delay: 50,
     reset: true,
 })
 sr.reveal(`.home__data, .footer`)
-sr.reveal(`.home__dish`, {delay: 500, distance: '100px', origin: 'bottom'})
-sr.reveal(`.home__burger`, {delay: 1200, distance: '100px', duration: '1500'})
-sr.reveal(`.home__ingredient`, {delay: 1600, interval: 100})
-sr.reveal(`.events__title`, {delay: 200, distance: '50px', origin: 'top'})
-sr.reveal(`.events__person-img`, {delay: 600, interval: 200, distance: '100px', origin: 'bottom'})
-sr.reveal(`.events__offer`, {delay: 1000, distance: '50px', origin: 'bottom'})
-sr.reveal(`.events__bottle-img`, {delay: 1200, distance: '30px', origin: 'right'})
-sr.reveal(`.confetti`, {delay: 1400, interval: 50, distance: '20px'})
+sr.reveal(`.home__dish`, {delay: 100, distance: '100px', origin: 'bottom'})
+sr.reveal(`.home__burger`, {delay: 200, distance: '100px', duration: 400})
+sr.reveal(`.home__ingredient`, {delay: 300, interval: 50})
+sr.reveal(`.events__title`, {delay: 50, distance: '50px', origin: 'top'})
+sr.reveal(`.events__person-img`, {delay: 150, interval: 100, distance: '100px', origin: 'bottom'})
+sr.reveal(`.events__offer`, {delay: 250, distance: '50px', origin: 'bottom'})
+sr.reveal(`.events__bottle-img`, {delay: 300, distance: '30px', origin: 'right'})
+sr.reveal(`.confetti`, {delay: 350, interval: 25, distance: '20px'})
 sr.reveal(`.contact__img`, {origin: 'left'})
 sr.reveal(`.contact__data`, {origin: 'right'})
-sr.reveal(`.popular__card`, {interval: 100})
+sr.reveal(`.popular__card`, {interval: 50})
 
+/*=============== EVENTS CAROUSEL ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.events__carousel-wrapper');
+    const cards = document.querySelectorAll('.events__card');
+    const dots = document.querySelectorAll('.events__dot');
+    const prevBtn = document.getElementById('events-prev');
+    const nextBtn = document.getElementById('events-next');
+    
+    let currentSlide = 0;
+    const totalSlides = cards.length;
 
+    function updateCarousel() {
+        // Update carousel transform
+        carousel.style.transform = `translateX(-${currentSlide * 50}%)`;
+        
+        // Update active card
+        cards.forEach((card, index) => {
+            card.classList.toggle('active', index === currentSlide);
+        });
+        
+        // Update active dot
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    // Event listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateCarousel();
+        });
+    });
+
+    // Auto-play carousel (optional)
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    // Initialize carousel
+    updateCarousel();
+});
 

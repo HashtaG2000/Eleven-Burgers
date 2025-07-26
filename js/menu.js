@@ -355,28 +355,28 @@ const addCustomAnimations = () => {
 const sr = ScrollReveal({
     origin: 'bottom',
     distance: '60px',
-    duration: 800,
-    delay: 150,
+    duration: 400,
+    delay: 50,
     reset: false,
 })
 
 // Hero section
-sr.reveal(`.hero__title`, {delay: 100, distance: '50px', origin: 'top'})
-sr.reveal(`.hero__description`, {delay: 200})
-sr.reveal(`.hero__special`, {delay: 300, distance: '80px'})
+sr.reveal(`.hero__title`, {delay: 50, distance: '50px', origin: 'top'})
+sr.reveal(`.hero__description`, {delay: 100})
+sr.reveal(`.hero__special`, {delay: 150, distance: '80px'})
 
 // Menu sections
-sr.reveal(`.section__title`, {delay: 100, distance: '30px', origin: 'top'})
-sr.reveal(`.category__title`, {delay: 150, distance: '30px', origin: 'top'})
-sr.reveal(`.menu__item`, {delay: 200, interval: 50})
-sr.reveal(`.addon__item`, {delay: 100, interval: 25})
-sr.reveal(`.drink__item`, {delay: 100, interval: 25})
-sr.reveal(`.spirit__item`, {delay: 100, interval: 25})
+sr.reveal(`.section__title`, {delay: 50, distance: '30px', origin: 'top'})
+sr.reveal(`.category__title`, {delay: 75, distance: '30px', origin: 'top'})
+sr.reveal(`.menu__item`, {delay: 100, interval: 25})
+sr.reveal(`.addon__item`, {delay: 50, interval: 15})
+sr.reveal(`.drink__item`, {delay: 50, interval: 15})
+sr.reveal(`.spirit__item`, {delay: 50, interval: 15})
 
 // Footer
-sr.reveal(`.footer__logo`, {delay: 200})
-sr.reveal(`.footer__content`, {delay: 400})
-sr.reveal(`.footer__copy`, {delay: 600})
+sr.reveal(`.footer__logo`, {delay: 100})
+sr.reveal(`.footer__content`, {delay: 200})
+sr.reveal(`.footer__copy`, {delay: 300})
 
 /*=============== INITIALIZE ALL FUNCTIONS ===============*/
 document.addEventListener('DOMContentLoaded', () => {

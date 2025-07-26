@@ -477,6 +477,84 @@ right: 6rem;
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(180deg); }
 }
+
+/*=============== EVENTS CAROUSEL ===============*/
+.events__carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.events__carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 200%;
+}
+
+.events__card {
+  width: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  flex-shrink: 0;
+}
+
+.events__card.active {
+  opacity: 1;
+}
+
+.events__promo-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.events__carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.events__nav-btn {
+  background-color: var(--first-color);
+  color: var(--title-color);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.events__nav-btn:hover {
+  background-color: var(--first-color-alt);
+}
+
+.events__carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.events__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-color-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.events__dot.active {
+  background-color: var(--first-color);
+}
 /*=============== POPULAR ===============*/
 .popular{
   background-color: var(--body-color);
