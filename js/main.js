@@ -87,6 +87,12 @@ sr.reveal(`.confetti`, {delay: 350, interval: 25, distance: '20px'})
 sr.reveal(`.contact__img`, {origin: 'left'})
 sr.reveal(`.contact__data`, {origin: 'right'})
 sr.reveal(`.popular__card`, {interval: 50})
+sr.reveal(`.private-events__subtitle`, {delay: 100, distance: '30px', origin: 'top'})
+sr.reveal(`.private-events__description`, {delay: 150, distance: '30px', origin: 'left'})
+sr.reveal(`.capacity__item`, {delay: 200, interval: 100, distance: '50px', origin: 'bottom'})
+sr.reveal(`.private-events__features`, {delay: 300, distance: '30px', origin: 'left'})
+sr.reveal(`.private-events__cta`, {delay: 350, distance: '30px', origin: 'bottom'})
+sr.reveal(`.private-events__img`, {delay: 200, distance: '100px', origin: 'right'})
 
 /*=============== EVENTS CAROUSEL ===============*/
 document.addEventListener('DOMContentLoaded', function() {
@@ -146,5 +152,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize carousel
     updateCarousel();
+});
+
+/*=============== LANGUAGE TOGGLE ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('language-toggle');
+    const langOptions = document.querySelectorAll('.lang-option');
+    
+    // Get current language from localStorage or default to German
+    let currentLang = localStorage.getItem('language') || 'de';
+    
+    // Initialize language
+    setLanguage(currentLang);
+    
+    // Add click listeners to language options
+    langOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedLang = option.getAttribute('data-lang');
+            setLanguage(selectedLang);
+            localStorage.setItem('language', selectedLang);
+        });
+    });
+    
+    function setLanguage(lang) {
+        currentLang = lang;
+        
+        // Update active language button
+        langOptions.forEach(option => {
+            option.classList.toggle('active', option.getAttribute('data-lang') === lang);
+        });
+        
+        // Update all elements with translation data
+        const translatableElements = document.querySelectorAll('[data-de][data-en]');
+        
+        translatableElements.forEach(element => {
+            const translation = element.getAttribute(`data-${lang}`);
+            if (translation) {
+                element.innerHTML = translation;
+            }
+        });
+        
+        // Update document language attribute
+        document.documentElement.lang = lang;
+    }
 });
 

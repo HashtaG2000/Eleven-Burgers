@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-   <html lang="en">
+   <html lang="de">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,18 +28,27 @@
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li>
-                     <a href="#home" class="nav__link active-link">Home </a>
+                     <a href="#home" class="nav__link active-link" data-de="Startseite" data-en="Home">Startseite</a>
                   </li>
                   <li>
-                     <a href="#events" class="nav__link">Promotions</a>
+                     <a href="#events" class="nav__link" data-de="Promotions" data-en="Promotions">Promotions</a>
                   </li>
                   <li>
-                     <a href="#popular" class="nav__link">Popular</a>
+                     <a href="#popular" class="nav__link" data-de="Beliebt" data-en="Popular">Beliebt</a>
                   </li>
                   <li>
-                     <a href="#contact" class="nav__link">Contact</a>
+                     <a href="#private-events" class="nav__link" data-de="Private Veranstaltungen" data-en="Private Events">Private Veranstaltungen</a>
                   </li>
-                  
+                  <li>
+                     <a href="#contact" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+                  </li>
+                  <li class="nav__language">
+                     <button class="language-toggle" id="language-toggle">
+                        <span class="lang-option active" data-lang="de">DE</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="en">EN</span>
+                     </button>
+                  </li>
                </ul>
                <!-- close button -->
                 <div class="nav__close" id="nav-close">
@@ -59,11 +68,11 @@
          <section class="home section" id="home">
             <div class="home__container container grid">
                <div class="home__data">
-                  <h1 class="home__title">From Classic to <br>Premium</h1>
+                  <h1 class="home__title" data-de="Von Klassisch bis <br>Premium" data-en="From Classic to <br>Premium">Von Klassisch bis <br>Premium</h1>
                   <p class="home__description">
-                     Serving premium handcrafted 11 Burgers that Break the Rules
+                     <span data-de="Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen" data-en="Serving premium handcrafted 11 Burgers that Break the Rules">Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen</span>
                   </p>
-                  <a href="#popular" class="button">Best Sellers</a>
+                  <a href="#popular" class="button" data-de="Bestseller" data-en="Best Sellers">Bestseller</a>
                   <img src="assets/img/sticker-potatoes.svg" alt="img" class="home__sticker">
                </div>
                <div class="home__images">
@@ -83,7 +92,7 @@
 
          <!--==================== PROMOTIONS ====================-->
          <section class="events section" id="events">
-            <h2 class="section__title">Current Promotions</h2>
+            <h2 class="section__title" data-de="Aktuelle Aktionen" data-en="Current Promotions">Aktuelle Aktionen</h2>
             <div class="events__container container">
                <div class="events__carousel">
                   <div class="events__carousel-wrapper">
@@ -175,7 +184,7 @@
 
          <!--==================== POPULAR ====================-->
          <section class="popular section" id="popular">
-            <h2 class="section__title">House Specialty <br> Burgers</h2>
+            <h2 class="section__title" data-de="Haus-Spezialitäten <br> Burger" data-en="House Specialty <br> Burgers">Haus-Spezialitäten <br> Burger</h2>
             <div class="popular__container container grid">
 
                <article class="popular__card">
@@ -203,7 +212,7 @@
                </article>
 
                <article class="popular__card">
-                  <img src="assets/img/popular-burger-big.png" alt="image" class="popular__img">
+                  <img src="assets/img/popular-paneer.png" alt="image" class="popular__img">
                   <h2 class="popular__title">Paneer (Veg) <br> Burger</h2>
                   <span class="popular__price">€12</span>
                </article>
@@ -217,20 +226,84 @@
             </div>
             
             <div class="popular__button-container">
-               <a href="webview/menu.html" class="button">View Full Menu</a>
+               <a href="webview/menu.html" class="button" data-de="Vollständige Speisekarte" data-en="View Full Menu">Vollständige Speisekarte</a>
             </div>
          </section>
 
+         <!--==================== PRIVATE EVENTS ====================-->
+         <section class="private-events section" id="private-events">
+            <div class="private-events__container container">
+               <h2 class="section__title" data-de="Private Veranstaltungen" data-en="Private Events">Private Veranstaltungen</h2>
+               
+               <div class="private-events__content grid">
+                  <div class="private-events__info">
+                     <h3 class="private-events__subtitle" data-de="Mieten Sie unser Restaurant" data-en="Rent Our Restaurant">Mieten Sie unser Restaurant</h3>
+                     <p class="private-events__description" data-de="Veranstalten Sie Ihre besonderen Momente bei 11 Burgers! Unser Restaurant steht für private Veranstaltungen zur Verfügung." data-en="Host your special moments at 11 Burgers! Our restaurant is available for private events.">
+                        Veranstalten Sie Ihre besonderen Momente bei 11 Burgers! Unser Restaurant steht für private Veranstaltungen zur Verfügung.
+                     </p>
+                     
+                     <div class="private-events__capacity">
+                        <div class="capacity__item">
+                           <div class="capacity__icon">
+                              <i class="ri-group-line"></i>
+                           </div>
+                           <div class="capacity__details">
+                              <h4 data-de="Sitzplätze" data-en="Seated Capacity">Sitzplätze</h4>
+                              <span class="capacity__number">54-60</span>
+                              <p data-de="Personen" data-en="People">Personen</p>
+                           </div>
+                        </div>
+                        
+                        <div class="capacity__item">
+                           <div class="capacity__icon">
+                              <i class="ri-user-3-line"></i>
+                           </div>
+                           <div class="capacity__details">
+                              <h4 data-de="Stehplätze" data-en="Standing Capacity">Stehplätze</h4>
+                              <span class="capacity__number">100-150</span>
+                              <p data-de="Personen" data-en="People">Personen</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="private-events__features">
+                        <h4 data-de="Perfekt für:" data-en="Perfect for:">Perfekt für:</h4>
+                        <ul class="features__list">
+                           <li data-de="Geburtstagsfeiern" data-en="Birthday Parties">Geburtstagsfeiern</li>
+                           <li data-de="Firmenveranstaltungen" data-en="Corporate Events">Firmenveranstaltungen</li>
+                           <li data-de="Hochzeitsfeiern" data-en="Wedding Celebrations">Hochzeitsfeiern</li>
+                           <li data-de="Familientreffen" data-en="Family Gatherings">Familientreffen</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="private-events__cta">
+                        <a href="https://wa.me/4922171732502" class="button" target="_blank" rel="noopener" data-de="Jetzt Anfragen" data-en="Inquire Now">Jetzt Anfragen</a>
+                        <p class="cta__note" data-de="Kontaktieren Sie uns für individuelle Angebote und Verfügbarkeit" data-en="Contact us for custom quotes and availability">
+                           Kontaktieren Sie uns für individuelle Angebote und Verfügbarkeit
+                        </p>
+                     </div>
+                  </div>
+                  
+                  <div class="private-events__image">
+                     <img src="assets/img/inquiry-man.png" alt="Private Events" class="private-events__img">
+                     <div class="private-events__decoration">
+                        <img src="assets/img/sticker-burger.svg" alt="Burger sticker" class="decoration__sticker decoration__sticker-1">
+                        <img src="assets/img/sticker-soda.svg" alt="Soda sticker" class="decoration__sticker decoration__sticker-2">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
 
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
            <div class="contact__container container grid">
-            <h2 class="section__title">Contact Now</h2>
+            <h2 class="section__title" data-de="Jetzt Kontaktieren" data-en="Contact Now">Jetzt Kontaktieren</h2>
 
             <div class="contact__content grid">
                <div class="contact__data grid">
                   <div>
-                     <h3 class="contact__title">Write Us</h3>
+                     <h3 class="contact__title" data-de="Schreiben Sie uns" data-en="Write Us">Schreiben Sie uns</h3>
                      <div class="contact__social">
                         <a rel= "noopener" href="https://wa.me/4922171732502" target="_blank" aria-label="Contact me on WhatsApp">
                            <i class="ri-whatsapp-fill"></i>
@@ -238,59 +311,59 @@
                         <a rel= "noopener" href="https://www.facebook.com/profile.php?id=61552233219900" target="_blank" aria-label="Reach out to me on Facebook">
                            <i class="ri-facebook-circle-fill"></i>
                         </a>
-                        <a rel= "noopener" href="info@11burgers.com" target="_blank" aria-label="Contact me on Email">
+                        <a rel= "noopener" href="mailto:info@11burgers.com" target="_blank" aria-label="Contact me on Email">
                            <i class="ri-mail-fill"></i>
                         </a>
                      </div>
                   </div>
 
                 <div>
-                  <h3 class="contact__title">Call Us and Order</h3>
+                  <h3 class="contact__title" data-de="Anrufen und Bestellen" data-en="Call Us and Order">Anrufen und Bestellen</h3>
                   <address class="contact__info">
                      +49-22171732502
                   </address>
                 </div> 
                 <div>
-                  <h3 class="contact__title">Find us here</h3>
+                  <h3 class="contact__title" data-de="Finden Sie uns hier" data-en="Find us here">Finden Sie uns hier</h3>
                   <address class="contact__info">
                      Blaubach 6-8<br>
                      50676, Köln, Deutschland
                   </address>
                 </div>
                 <div>
-                  <h3 class="contact__title">Opening Hours</h3>
+                  <h3 class="contact__title" data-de="Öffnungszeiten" data-en="Opening Hours">Öffnungszeiten</h3>
                   <address class="contact__info">
                      <table>
                         <tr>
-                          <th>Day</th>
-                          <th>Operating Hours</th>
+                          <th data-de="Tag" data-en="Day">Tag</th>
+                          <th data-de="Öffnungszeiten" data-en="Operating Hours">Öffnungszeiten</th>
                         </tr>
                         <tr>
-                          <td>Monday</td>
-                          <td>Closed</td>
+                          <td data-de="Montag" data-en="Monday">Montag</td>
+                          <td data-de="Geschlossen" data-en="Closed">Geschlossen</td>
                         </tr>
                         <tr>
-                          <td>Tuesday</td>
+                          <td data-de="Dienstag" data-en="Tuesday">Dienstag</td>
                           <td>12:00 - 22:00</td>
                         </tr>
                         <tr>
-                          <td>Wednesday</td>
+                          <td data-de="Mittwoch" data-en="Wednesday">Mittwoch</td>
                           <td>12:00 - 22:00</td>
                         </tr>
                         <tr>
-                          <td>Thursday</td>
+                          <td data-de="Donnerstag" data-en="Thursday">Donnerstag</td>
                            <td>12:00 - 22:00</td>
                         </tr>
                         <tr>
-                          <td>Friday</td>
+                          <td data-de="Freitag" data-en="Friday">Freitag</td>
                           <td>12:00 - 22:30</td>
                         </tr>
                         <tr>
-                          <td>Saturday</td>
+                          <td data-de="Samstag" data-en="Saturday">Samstag</td>
                           <td>12:00 - 22:30</td>
                         </tr>
                         <tr>
-                          <td>Sunday</td>
+                          <td data-de="Sonntag" data-en="Sunday">Sonntag</td>
                           <td>12:00 - 22:00</td>
                         </tr>
                       </table>
@@ -314,18 +387,19 @@
             <a href="#" class="footer__logo">11 Burgers</a>
 
             <div class="footer__content grid">
-               <a href="terms.html" class="footer__links">Terms & Agreements</a>
-               <a href="privacy-policy.html" class="footer__links">Privacy Policy</a>
+               <a href="terms.html" class="footer__links" data-de="AGB" data-en="Terms & Agreements">AGB</a>
+               <a href="privacy-policy.html" class="footer__links" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a>
                <div class="footer__social">
-                  <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-                     <i class="ri-facebook-circle-fill"></i> 
+                  <a rel= "noopener" href="https://wa.me/4922171732502" target="_blank" aria-label="Contact me on WhatsApp">
+                     <i class="ri-whatsapp-fill"></i>
                   </a>
-                  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-                     <i class="ri-instagram-fill"></i>
+                  <a rel= "noopener" href="https://www.facebook.com/profile.php?id=61552233219900" target="_blank" aria-label="Reach out to me on Facebook">
+                     <i class="ri-facebook-circle-fill"></i>
                   </a>
-                  <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
-                     <i class="ri-twitter-x-line"></i>
+                  <a rel= "noopener" href="mailto:info@11burgers.com" target="_blank" aria-label="Contact me on Email">
+                     <i class="ri-mail-fill"></i>
                   </a>
+               </div>
                </div>
             </div>
          </div>
