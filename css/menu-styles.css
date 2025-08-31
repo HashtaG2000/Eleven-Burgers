@@ -252,12 +252,12 @@ img {
 }
 
 .hero__special {
-  background: linear-gradient(135deg, var(--first-color), var(--first-color-alt));
+  background-color: var(--second-color);
   padding: 1.5rem 2rem;
   border-radius: 1rem;
-  color: var(--second-color);
-  max-width: 400px;
-  box-shadow: 0 8px 24px hsla(45, 100%, 45%, .2);
+  color: var(--first-color);
+  max-width: 600px;
+  box-shadow: 0 8px 24px hsla(240, 88%, 7%, .2);
 }
 
 .special__badge {
@@ -273,6 +273,7 @@ img {
 .special__text {
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
+  color: var(--white-color);
 }
 
 /*=============== MENU SECTIONS ===============*/
@@ -677,9 +678,7 @@ img {
 }
 
 @media screen and (min-width: 768px){
-  .hero__container{
-    max-width: 600px;
-  }
+
   .menu__grid{
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
@@ -764,5 +763,96 @@ img {
   }
   .scrollup{
     right: 3rem;
+  }
+}
+
+/*=============== LUNCH MENU SPECIFIC STYLES ===============*/
+.lunch-badge {
+  background-color: var(--second-color);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.lunch-time-badge {
+  background-color: var(--second-color);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.lunch-menu-btn {
+  display: inline-block;
+  background: var(--second-color);
+  color: var(--first-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  font-size: var(--small-font-size);
+}
+
+.lunch-menu-btn:hover {
+  background: var(--container-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsla(240, 88%, 7%, 0.3);
+}
+
+/*=============== LUNCH CTA SECTION ===============*/
+.lunch__cta {
+  background: var(--menu-card-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  border: 2px solid var(--first-color);
+}
+
+.cta__title {
+  color: var(--first-color);
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+  font-family: var(--second-font);
+}
+
+.cta__description {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  font-size: var(--normal-font-size);
+  opacity: 0.9;
+}
+
+.cta__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button--outline {
+  background: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
+}
+
+.button--outline:hover {
+  background: var(--first-color);
+  color: var(--second-color);
+}
+
+/*=============== ENHANCED HERO SPECIAL LAYOUT ===============*/
+.hero__special + .hero__special {
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lunch-menu-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: var(--small-font-size);
   }
 }

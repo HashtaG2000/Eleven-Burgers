@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+   <html lang="de">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="css/styles.css">
+
+      <title>11 Burgers</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="" class="nav__logo">
+               <div>
+                  <img src="assets/img/elevenburgers.png" alt="logo">
+               </div>
+               11 Burgers
+            </a>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li>
+                     <a href="#home" class="nav__link active-link" data-de="Startseite" data-en="Home">Startseite</a>
+                  </li>
+                  <li>
+                     <a href="#events" class="nav__link" data-de="Promotions" data-en="Promotions">Promotions</a>
+                  </li>
+                  <li>
+                     <a href="#popular" class="nav__link" data-de="Beliebt" data-en="Popular">Beliebt</a>
+                  </li>
+                  <li>
+                     <a href="#private-events" class="nav__link" data-de="Private Veranstaltungen" data-en="Private Events">Private Veranstaltungen</a>
+                  </li>
+                  <li>
+                     <a href="#contact" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+                  </li>
+                  <li class="nav__language">
+                     <button class="language-toggle" id="language-toggle">
+                        <span class="lang-option active" data-lang="de">DE</span>
+                        <span class="lang-divider">|</span>
+                        <span class="lang-option" data-lang="en">EN</span>
+                     </button>
+                  </li>
+               </ul>
+               <!-- close button -->
+                <div class="nav__close" id="nav-close">
+                  <i class="ri-close-large-line"></i>
+                </div>               
+            </div>
+             <!-- Toogle Button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-apps-2-line"></i>
+              </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h1 class="home__title" data-de="Genuss, der deine <br> Gelüste stillt." data-en="Designed to satisfy your <br> Deepest cravings.">Genuss, der deine <br> Gelüste stillt.</h1>
+                  <p class="home__description">
+                     <span data-de="Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen" data-en="Serving premium handcrafted 11 Burgers that Break the Rules">Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen</span>
+                  </p>
+                  <a href="#popular" class="button" data-de="Bestseller" data-en="Best Sellers">Bestseller</a>
+                  <img src="assets/img/sticker-potatoes.svg" alt="img" class="home__sticker">
+               </div>
+               <div class="home__images">
+                  <img src="assets/img/home-burger.png" alt="image" class="home__burger">
+
+                  <img src="assets/img/home-potato.png" alt="image" class="home__ingredient home__potato-1">
+                  <img src="assets/img/home-potato.png" alt="image" class="home__ingredient home__potato-2">
+                  <img src="assets/img/home-tomato.png" alt="image" class="home__ingredient home__tomato-1">
+                  <img src="assets/img/home-tomato.png" alt="image" class="home__ingredient home__tomato-2">
+                  <img src="assets/img/home-lettuce.png" alt="image" class="home__ingredient home__lettuce-1">
+                  <img src="assets/img/home-lettuce.png" alt="image" class="home__ingredient home__lettuce-2">
+
+               </div>
+            </div>
+         </section>
+
+         <!--==================== PROMOTIONS ====================-->
+         <section class="events section" id="events">
+            <h2 class="section__title" data-de="Aktuelle Aktionen" data-en="Current Promotions">Aktuelle Aktionen</h2>
+            <div class="events__container container">
+               <div class="events__carousel">
+                  <div class="events__content">
+                     <h1 class="events__title">HAPPY<br>BIRTHDAY!</h1>
+                     
+                     <div class="events__people">
+                        <img src="assets/img/event-woman-1.png" alt="Woman celebrating" class="events__person-img">
+                        <img src="assets/img/event-man-1.png" alt="Man with party hat and drink" class="events__person-img">
+                        <img src="assets/img/event-woman-2.png" alt="Woman celebrating" class="events__person-img">
+                        <img src="assets/img/event-man-2.png" alt="Man with party hat" class="events__person-img">
+                     </div>
+                     
+                     <div class="events__offer">
+                        <h2 class="events__offer-title">CELEBRATION OFFER</h2>
+                        <h3 class="events__offer-subtitle">8+ GUESTS</h3>
+                        <p class="events__offer-text">GET A BOTTLE<br>OF PROSECCO<br>ON THE HOUSE</p>
+                        <img src="assets/img/event-wine-bottle.png" alt="Prosecco bottle" class="events__bottle-img">
+                     </div>
+                     
+                     <div class="events__confetti">
+                        <div class="confetti confetti-1"></div>
+                        <div class="confetti confetti-2"></div>
+                        <div class="confetti confetti-3"></div>
+                        <div class="confetti confetti-4"></div>
+                        <div class="confetti confetti-5"></div>
+                        <div class="confetti confetti-6"></div>
+                        <div class="confetti confetti-7"></div>
+                        <div class="confetti confetti-8"></div>
+                        <div class="confetti confetti-9"></div>
+                        <div class="confetti confetti-10"></div>
+                        <div class="confetti confetti-11"></div>
+                        <div class="confetti confetti-12"></div>
+                        <div class="confetti confetti-13"></div>
+                        <div class="confetti confetti-14"></div>
+                        <div class="confetti confetti-15"></div>
+                        <div class="confetti confetti-16"></div>
+                        <div class="confetti confetti-17"></div>
+                        <div class="confetti confetti-18"></div>
+                        <div class="confetti confetti-19"></div>
+                        <div class="confetti confetti-20"></div>
+                        <div class="confetti confetti-21"></div>
+                        <div class="confetti confetti-22"></div>
+                        <div class="confetti confetti-23"></div>
+                        <div class="confetti confetti-24"></div>
+                        <div class="confetti confetti-25"></div>
+                        <div class="confetti confetti-26"></div>
+                        <div class="confetti confetti-27"></div>
+                        <div class="confetti confetti-28"></div>
+                        <div class="confetti confetti-29"></div>
+                        <div class="confetti confetti-30"></div>
+                        <div class="confetti confetti-31"></div>
+                        <div class="confetti confetti-32"></div>
+                        <div class="confetti confetti-33"></div>
+                        <div class="confetti confetti-34"></div>
+                        <div class="confetti confetti-35"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== POPULAR ====================-->
+         <section class="popular section" id="popular">
+            <h2 class="section__title" data-de="Haus-Spezialitäten <br> Burger" data-en="House Specialty <br> Burgers">Haus-Spezialitäten <br> Burger</h2>
+            <div class="popular__container container grid">
+
+               <article class="popular__card">
+                  <img src="assets/img/popular-burger-chicken.png" alt="image" class="popular__img">
+                  <h2 class="popular__title">New York Style <br> Burger</h2>
+                  <span class="popular__price">€14</span>
+               </article>
+
+               <article class="popular__card">
+                  <img src="assets/img/popular-burger-meat.png" alt="image" class="popular__img">
+                  <h2 class="popular__title">Tikka <br> Burger</h2>
+                  <span class="popular__price">€12,50</span>
+               </article>
+
+               <article class="popular__card">
+                  <img src="assets/img/popular-burger-grill.png" alt="image" class="popular__img">
+                  <h2 class="popular__title">Französischer <br> Trüffel-Smash</h2>
+                  <span class="popular__price">€14,50</span>
+               </article>
+
+               <article class="popular__card">
+                  <img src="assets/img/popular-burger-classic.png" alt="image" class="popular__img">
+                  <h2 class="popular__title">Italien <br>Grando</h2>
+                  <span class="popular__price">€15</span>
+               </article>
+
+               <article class="popular__card">
+                  <img src="assets/img/popular-paneer.png" alt="image" class="popular__img">
+                  <h2 class="popular__title">Paneer (Veg) <br> Burger</h2>
+                  <span class="popular__price">€12</span>
+               </article>
+
+               <article class="popular__card">
+                  <img src="assets/img/popular-burger-big.png" alt="image" class="popular__img">
+                  <h2 class="popular__title">Trüffel (Vegan)<br> Burger</h2>
+                  <span class="popular__price">€14</span>
+               </article>
+
+            </div>
+            
+            <div class="popular__button-container">
+               <a href="webview/menu.html" class="button" data-de="Vollständige Speisekarte" data-en="View Full Menu">Vollständige Speisekarte</a>
+            </div>
+         </section>
+
+         <!--==================== PRIVATE EVENTS ====================-->
+         <section class="private-events section" id="private-events">
+            <div class="private-events__container container">
+               <h2 class="section__title" data-de="Private Veranstaltungen" data-en="Private Events">Private Veranstaltungen</h2>
+               
+               <div class="private-events__content grid">
+                  <div class="private-events__info">
+                     <h3 class="private-events__subtitle" data-de="Mieten Sie unser Restaurant" data-en="Rent Our Restaurant">Mieten Sie unser Restaurant</h3>
+                     <p class="private-events__description" data-de="Veranstalten Sie Ihre besonderen Momente bei 11 Burgers! Unser Restaurant steht für private Veranstaltungen zur Verfügung." data-en="Host your special moments at 11 Burgers! Our restaurant is available for private events.">
+                        Veranstalten Sie Ihre besonderen Momente bei 11 Burgers! Unser Restaurant steht für private Veranstaltungen zur Verfügung.
+                     </p>
+                     
+                     <div class="private-events__capacity">
+                        <div class="capacity__item">
+                           <div class="capacity__icon">
+                              <i class="ri-group-line"></i>
+                           </div>
+                           <div class="capacity__details">
+                              <h4 data-de="Sitzplätze" data-en="Seated Capacity">Sitzplätze</h4>
+                              <span class="capacity__number">54-60</span>
+                              <p data-de="Personen" data-en="People">Personen</p>
+                           </div>
+                        </div>
+                        
+                        <div class="capacity__item">
+                           <div class="capacity__icon">
+                              <i class="ri-user-3-line"></i>
+                           </div>
+                           <div class="capacity__details">
+                              <h4 data-de="Stehplätze" data-en="Standing Capacity">Stehplätze</h4>
+                              <span class="capacity__number">100-150</span>
+                              <p data-de="Personen" data-en="People">Personen</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="private-events__features">
+                        <h4 data-de="Perfekt für:" data-en="Perfect for:">Perfekt für:</h4>
+                        <ul class="features__list">
+                           <li data-de="Geburtstagsfeiern" data-en="Birthday Parties">Geburtstagsfeiern</li>
+                           <li data-de="Firmenveranstaltungen" data-en="Corporate Events">Firmenveranstaltungen</li>
+                           <li data-de="Hochzeitsfeiern" data-en="Wedding Celebrations">Hochzeitsfeiern</li>
+                           <li data-de="Familientreffen" data-en="Family Gatherings">Familientreffen</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="private-events__cta">
+                        <a href="tel:+4922171732502" class="button" data-de="Jetzt Anfragen" data-en="Inquire Now">Jetzt Anfragen</a>
+                        <p class="cta__note" data-de="Kontaktieren Sie uns für individuelle Angebote und Verfügbarkeit" data-en="Contact us for custom quotes and availability">
+                           Kontaktieren Sie uns für individuelle Angebote und Verfügbarkeit
+                        </p>
+                     </div>
+                  </div>
+                  
+                  <div class="private-events__image">
+                     <img src="assets/img/inquiry-man.png" alt="Private Events" class="private-events__img">
+                     <div class="private-events__decoration">
+                        <img src="assets/img/sticker-burger.svg" alt="Burger sticker" class="decoration__sticker decoration__sticker-1">
+                        <img src="assets/img/sticker-soda.svg" alt="Soda sticker" class="decoration__sticker decoration__sticker-2">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+           <div class="contact__container container grid">
+            <h2 class="section__title" data-de="Jetzt Kontaktieren" data-en="Contact Now">Jetzt Kontaktieren</h2>
+
+            <div class="contact__content grid">
+               <div class="contact__data grid">
+                  <div>
+                     <h3 class="contact__title" data-de="Schreiben Sie uns" data-en="Write Us">Schreiben Sie uns</h3>
+                     <div class="contact__social">
+                        <a href="tel:+4922171732502" aria-label="Call us">
+                           <i class="ri-phone-fill"></i>
+                        </a>
+                        <a rel= "noopener" href="https://www.facebook.com/profile.php?id=61552233219900" target="_blank" aria-label="Reach out to me on Facebook">
+                           <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a rel= "noopener" href="mailto:info@11burgers.com" target="_blank" aria-label="Contact me on Email">
+                           <i class="ri-mail-fill"></i>
+                        </a>
+                     </div>
+                  </div>
+
+                <div>
+                  <h3 class="contact__title" data-de="Anrufen und Bestellen" data-en="Call Us and Order">Anrufen und Bestellen</h3>
+                  <address class="contact__info">
+                     +49-22171732502
+                  </address>
+                </div> 
+                <div>
+                  <h3 class="contact__title" data-de="Finden Sie uns hier" data-en="Find us here">Finden Sie uns hier</h3>
+                  <address class="contact__info">
+                     Blaubach 6-8<br>
+                     50676, Köln, Deutschland
+                  </address>
+                </div>
+                <div>
+                  <h3 class="contact__title" data-de="Öffnungszeiten" data-en="Opening Hours">Öffnungszeiten</h3>
+                  <address class="contact__info">
+                     <table>
+                        <tr>
+                          <th data-de="Tag" data-en="Day">Tag</th>
+                          <th data-de="Öffnungszeiten" data-en="Operating Hours">Öffnungszeiten</th>
+                        </tr>
+                        <tr>
+                          <td data-de="Montag" data-en="Monday">Montag</td>
+                          <td data-de="Geschlossen" data-en="Closed">Geschlossen</td>
+                        </tr>
+                        <tr>
+                          <td data-de="Dienstag" data-en="Tuesday">Dienstag</td>
+                          <td>12:00 - 22:00</td>
+                        </tr>
+                        <tr>
+                          <td data-de="Mittwoch" data-en="Wednesday">Mittwoch</td>
+                          <td>12:00 - 22:00</td>
+                        </tr>
+                        <tr>
+                          <td data-de="Donnerstag" data-en="Thursday">Donnerstag</td>
+                           <td>12:00 - 22:00</td>
+                        </tr>
+                        <tr>
+                          <td data-de="Freitag" data-en="Friday">Freitag</td>
+                          <td>12:00 - 22:30</td>
+                        </tr>
+                        <tr>
+                          <td data-de="Samstag" data-en="Saturday">Samstag</td>
+                          <td>12:00 - 22:30</td>
+                        </tr>
+                        <tr>
+                          <td data-de="Sonntag" data-en="Sunday">Sonntag</td>
+                          <td>12:00 - 22:00</td>
+                        </tr>
+                      </table>
+                  </address>
+                </div>
+               </div>
+               <div class="contact__image">
+                  <img src="assets/img/contact-man.png" alt="image" class="contact__img">
+               </div>
+            </div>
+            <img src="assets/img/sticker-burger.svg" alt="image" class="contact__sticker-1">
+            <img src="assets/img/sticker-soda.svg" alt="image" class="contact__sticker-2">
+
+           </div> 
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <a href="index.html" class="footer__logo">11 Burgers</a>
+   
+            <div class="footer__content grid">
+               <a href="terms.html" class="footer__links">Terms & Agreements</a>
+               <a href="privacy-policy.html" class="footer__links">Privacy Policy</a>
+               <div class="footer__social">
+                  <a href="tel:+4922171732502" aria-label="Call us">
+                     <i class="ri-phone-fill"></i>
+                  </a>
+                  <a rel= "noopener" href="https://www.facebook.com/profile.php?id=61552233219900" target="_blank" aria-label="Reach out to me on Facebook">
+                     <i class="ri-facebook-circle-fill"></i>
+                  </a>
+                  <a rel= "noopener" href="mailto:info@11burgers.com" target="_blank" aria-label="Contact me on Email">
+                     <i class="ri-mail-fill"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <span class="footer__copy">
+            &#169; All Rights Reserved By 11 Burgers
+         </span>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="js/scrollreveal.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="js/main.js"></script>
+   </body>
+</html>
