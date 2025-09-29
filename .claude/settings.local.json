@@ -6,7 +6,11 @@
       "Bash(git config:*)",
       "Bash(git init:*)",
       "Bash(gh:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd .gitignore file and update project configuration\n\n- Added comprehensive .gitignore for web project\n- Configured Claude settings for git operations\n- Prepared repository for better version control\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
