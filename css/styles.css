@@ -518,6 +518,72 @@ right: 6rem;
   color: var(--text-color-light);
 }
 
+/*=============== PARTNERS ===============*/
+.partners {
+  background-color: var(--body-color);
+  padding: 4rem 0;
+}
+
+.partners .section__title {
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.partners__content {
+  text-align: center;
+}
+
+.partners__description {
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.partners__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.partners__logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.partners__logo-item:hover {
+  transform: translateY(-5px);
+}
+
+.partners__logo {
+  max-width: 150px;
+  height: auto;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.partners__logo-item:hover .partners__logo {
+  filter: brightness(1);
+}
+
+@media screen and (min-width: 768px) {
+  .partners__logos {
+    gap: 3rem;
+  }
+
+  .partners__logo {
+    max-width: 200px;
+  }
+}
+
 /*=============== PRIVATE EVENTS ===============*/
 .private-events {
   background-color: var(--body-color);
