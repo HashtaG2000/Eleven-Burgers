@@ -553,9 +553,6 @@ right: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 1rem;
   transition: transform 0.3s ease;
 }
 
@@ -564,14 +561,13 @@ right: 6rem;
 }
 
 .partners__logo {
-  max-width: 150px;
+  max-width: 250px;
   height: auto;
-  filter: brightness(0.8);
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .partners__logo-item:hover .partners__logo {
-  filter: brightness(1);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 768px) {
@@ -580,7 +576,7 @@ right: 6rem;
   }
 
   .partners__logo {
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 
