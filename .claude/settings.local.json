@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git --version)",
+      "Bash(git config:*)",
+      "Bash(git init:*)",
+      "Bash(gh:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
