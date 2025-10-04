@@ -69,26 +69,63 @@
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
-            <div class="home__container container grid">
-               <div class="home__data">
-                  <h1 class="home__title" data-de="Genuss, der deine <br> Gelüste stillt." data-en="Designed to satisfy your <br> Deepest cravings.">Genuss, der deine <br> Gelüste stillt.</h1>
-                  <p class="home__description">
-                     <span data-de="Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen" data-en="Serving premium handcrafted 11 Burgers that Break the Rules">Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen</span>
-                  </p>
-                  <a href="#popular" class="button" data-de="Bestseller" data-en="Best Sellers">Bestseller</a>
-                  <img src="assets/img/sticker-potatoes.svg" alt="img" class="home__sticker">
-               </div>
-               <div class="home__images">
-                  <img src="assets/img/home-burger.png" alt="image" class="home__burger">
+            <div class="home__slider">
+               <!-- Slide 1: Burger -->
+               <div class="home__slide active" data-slide="0">
+                  <div class="home__container container grid">
+                     <div class="home__data">
+                        <h1 class="home__title" data-de="Genuss, der deine <br> Gelüste stillt." data-en="Designed to satisfy your <br> Deepest cravings.">Genuss, der deine <br> Gelüste stillt.</h1>
+                        <p class="home__description">
+                           <span data-de="Wir servieren Premium handgefertigte 11 Burger, die alle Regeln brechen" data-en="Serving premium handcrafted 11 Burgers that Break the Rules">Wir servieren Premium handgefertigte 11 <br> Burgers, die alle Regeln brechen</span>
+                        </p>
+                        <a href="#popular" class="button" data-de="Bestseller" data-en="Best Sellers">Bestseller</a>
+                        <img src="assets/img/sticker-potatoes.svg" alt="img" class="home__sticker">
+                     </div>
+                     <div class="home__images">
+                        <img src="assets/img/home-burger.png" alt="image" class="home__burger">
 
-                  <img src="assets/img/home-potato.png" alt="image" class="home__ingredient home__potato-1">
-                  <img src="assets/img/home-potato.png" alt="image" class="home__ingredient home__potato-2">
-                  <img src="assets/img/home-tomato.png" alt="image" class="home__ingredient home__tomato-1">
-                  <img src="assets/img/home-tomato.png" alt="image" class="home__ingredient home__tomato-2">
-                  <img src="assets/img/home-lettuce.png" alt="image" class="home__ingredient home__lettuce-1">
-                  <img src="assets/img/home-lettuce.png" alt="image" class="home__ingredient home__lettuce-2">
-
+                        <img src="assets/img/home-potato.png" alt="image" class="home__ingredient home__potato-1">
+                        <img src="assets/img/home-potato.png" alt="image" class="home__ingredient home__potato-2">
+                        <img src="assets/img/home-tomato.png" alt="image" class="home__ingredient home__tomato-1">
+                        <img src="assets/img/home-tomato.png" alt="image" class="home__ingredient home__tomato-2">
+                        <img src="assets/img/home-lettuce.png" alt="image" class="home__ingredient home__lettuce-1">
+                        <img src="assets/img/home-lettuce.png" alt="image" class="home__ingredient home__lettuce-2">
+                     </div>
+                  </div>
                </div>
+
+               <!-- Slide 2: Offer -->
+               <div class="home__slide" data-slide="1">
+                  <div class="home__container container grid">
+                     <div class="home__data">
+                        <h1 class="home__title" data-de="Spezielle <br> Angebote!" data-en="Special <br> Offers!">Spezielle <br> Angebote!</h1>
+                        <p class="home__description">
+                           <span data-de="Entdecken Sie unsere exklusiven Angebote und sparen Sie bei Ihren Lieblingsburgern" data-en="Discover our exclusive offers and save on your favorite burgers">Entdecken Sie unsere exklusiven Angebote und sparen Sie bei Ihren Lieblingsburgern</span>
+                        </p>
+                        <a href="#events" class="button" data-de="Angebote ansehen" data-en="View Offers">Angebote ansehen</a>
+                        <img src="assets/img/sticker-potatoes.svg" alt="img" class="home__sticker">
+                     </div>
+                     <div class="home__images">
+                        <img src="assets/img/offer.png" alt="Special Offers" class="home__offer-img">
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="home__navigation">
+               <button class="home__prev" id="home-prev" aria-label="Previous slide">
+                  <i class="ri-arrow-left-line"></i>
+               </button>
+               <button class="home__next" id="home-next" aria-label="Next slide">
+                  <i class="ri-arrow-right-line"></i>
+               </button>
+            </div>
+
+            <!-- Slider Indicators -->
+            <div class="home__indicators">
+               <button class="home__indicator active" data-slide="0" aria-label="Slide 1"></button>
+               <button class="home__indicator" data-slide="1" aria-label="Slide 2"></button>
             </div>
          </section>
 
@@ -229,14 +266,14 @@
          <section class="private-events section" id="private-events">
             <div class="private-events__container container">
                <h2 class="section__title" data-de="Private Veranstaltungen" data-en="Private Events">Private Veranstaltungen</h2>
-               
+
                <div class="private-events__content grid">
                   <div class="private-events__info">
                      <h3 class="private-events__subtitle" data-de="Mieten Sie unser Restaurant" data-en="Rent Our Restaurant">Mieten Sie unser Restaurant</h3>
                      <p class="private-events__description" data-de="Veranstalten Sie Ihre besonderen Momente bei 11 Burgers! Unser Restaurant steht für private Veranstaltungen zur Verfügung." data-en="Host your special moments at 11 Burgers! Our restaurant is available for private events.">
                         Veranstalten Sie Ihre besonderen Momente bei 11 Burgers! Unser Restaurant steht für private Veranstaltungen zur Verfügung.
                      </p>
-                     
+
                      <div class="private-events__capacity">
                         <div class="capacity__item">
                            <div class="capacity__icon">
@@ -248,7 +285,7 @@
                               <p data-de="Personen" data-en="People">Personen</p>
                            </div>
                         </div>
-                        
+
                         <div class="capacity__item">
                            <div class="capacity__icon">
                               <i class="ri-user-3-line"></i>
@@ -260,7 +297,7 @@
                            </div>
                         </div>
                      </div>
-                     
+
                      <div class="private-events__features">
                         <h4 data-de="Perfekt für:" data-en="Perfect for:">Perfekt für:</h4>
                         <ul class="features__list">
@@ -270,7 +307,7 @@
                            <li data-de="Familientreffen" data-en="Family Gatherings">Familientreffen</li>
                         </ul>
                      </div>
-                     
+
                      <div class="private-events__cta">
                         <a href="tel:+4922171732502" class="button" data-de="Jetzt Anfragen" data-en="Inquire Now">Jetzt Anfragen</a>
                         <p class="cta__note" data-de="Kontaktieren Sie uns für individuelle Angebote und Verfügbarkeit" data-en="Contact us for custom quotes and availability">
@@ -278,13 +315,9 @@
                         </p>
                      </div>
                   </div>
-                  
+
                   <div class="private-events__image">
-                     <img src="assets/img/inquiry-man.png" alt="Private Events" class="private-events__img">
-                     <div class="private-events__decoration">
-                        <img src="assets/img/sticker-burger.svg" alt="Burger sticker" class="decoration__sticker decoration__sticker-1">
-                        <img src="assets/img/sticker-soda.svg" alt="Soda sticker" class="decoration__sticker decoration__sticker-2">
-                     </div>
+                     <img src="assets/img/privat.png" alt="Private Events" class="private-events__img">
                   </div>
                </div>
             </div>

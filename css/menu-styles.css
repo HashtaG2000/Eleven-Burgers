@@ -95,7 +95,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
+  max-width: 1320px;
   margin-inline: 1.5rem;
 }
 
@@ -863,5 +863,24 @@ img {
   .lunch-menu-btn {
     padding: 0.6rem 1.2rem;
     font-size: var(--small-font-size);
+  }
+}
+
+/* For extra large devices */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .nav__list {
+    column-gap: 4rem;
+  }
+
+  .nav__link {
+    font-size: 1.1rem;
+  }
+
+  .menu__grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }

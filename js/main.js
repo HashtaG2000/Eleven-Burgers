@@ -138,3 +138,118 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+/*=============== HOME SLIDER ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.home__slide');
+    const indicators = document.querySelectorAll('.home__indicator');
+    const prevBtn = document.getElementById('home-prev');
+    const nextBtn = document.getElementById('home-next');
+
+    let currentSlide = 0;
+    let slideInterval;
+
+    // Initialize slider
+    function initSlider() {
+        showSlide(0);
+        startAutoSlide();
+    }
+
+    // Show specific slide
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active', 'prev'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current slide and indicator
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+
+        currentSlide = index;
+    }
+
+    // Next slide function
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    // Previous slide function
+    function prevSlide() {
+        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+    }
+
+    // Auto slide functionality
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
+
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+
+    // Event listeners for navigation buttons
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            nextSlide();
+            startAutoSlide();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            prevSlide();
+            startAutoSlide();
+        });
+    }
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            stopAutoSlide();
+            showSlide(index);
+            startAutoSlide();
+        });
+    });
+
+    // Pause auto-slide on hover
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        homeSection.addEventListener('mouseenter', stopAutoSlide);
+        homeSection.addEventListener('mouseleave', startAutoSlide);
+    }
+
+    // Touch/Swipe functionality for mobile
+    let startX = 0;
+    let endX = 0;
+
+    homeSection.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    homeSection.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            stopAutoSlide();
+            if (diff > 0) {
+                nextSlide(); // Swipe left - next slide
+            } else {
+                prevSlide(); // Swipe right - previous slide
+            }
+            startAutoSlide();
+        }
+    }
+
+    // Initialize the slider
+    initSlider();
+});
+

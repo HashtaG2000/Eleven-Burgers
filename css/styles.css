@@ -93,7 +93,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
+  max-width: 1320px;
   margin-inline: 1.5rem;
 }
 
@@ -293,6 +293,105 @@ right: 6rem;
   left: 2rem;
   bottom: 1rem;
 }
+
+/*=============== HOME SLIDER ===============*/
+.home__slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 700px;
+}
+
+.home__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+.home__slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.home__slide.prev {
+  transform: translateX(-100%);
+}
+
+/* Offer Image Styling */
+.home__offer-img {
+  width: 350px;
+  filter: var(--shadow-big-img);
+  z-index: 2;
+}
+
+/* Navigation Arrows */
+.home__navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+.home__prev,
+.home__next {
+  background-color: var(--container-color);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--first-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__prev:hover,
+.home__next:hover {
+  background-color: var(--first-color);
+  color: var(--second-color);
+  transform: scale(1.1);
+}
+
+/* Slider Indicators */
+.home__indicators {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.home__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home__indicator.active,
+.home__indicator:hover {
+  background-color: var(--first-color);
+  transform: scale(1.2);
+}
+
 /*=============== BUTTON ===============*/
 .button{
   display: inline-flex;
@@ -370,7 +469,7 @@ right: 6rem;
   border-radius: 15px;
   margin-top: 2rem;
   position: relative;
-  max-width: 100%;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -398,7 +497,6 @@ right: 6rem;
   font-family: var(--second-font);
   color: var(--white-color);
   line-height: 1.3;
-  font-weight: bold;
   margin-left: 1.5rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -417,7 +515,7 @@ right: 6rem;
   transform: rotate(25deg);
 }
 .events__bottle-img:hover {
-  transform: rotate(25deg) scale(1.1);
+  transform: rotate(25deg) scale(1.2);
 }
 .events__confetti {
   position: absolute;
@@ -713,32 +811,6 @@ right: 6rem;
   width: 100%;
   max-width: 400px;
   height: auto;
-}
-
-.private-events__decoration {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.decoration__sticker {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-}
-
-.decoration__sticker-1 {
-  top: 10%;
-  right: -10%;
-  animation: float 3s ease-in-out infinite;
-}
-
-.decoration__sticker-2 {
-  bottom: 20%;
-  left: -10%;
-  animation: float 3s ease-in-out infinite reverse;
 }
 /*=============== POPULAR ===============*/
 .popular{
@@ -1054,7 +1126,7 @@ right: 6rem;
   .events__offer{
     padding: 1.2rem 0.6rem 1.2rem 0.8rem;
     margin-top: 1.5rem;
-    max-width: 95%;
+    max-width: 90%;
     overflow: hidden;
     word-wrap: break-word;
   }
@@ -1134,7 +1206,7 @@ right: 6rem;
   .events__offer{
     padding: 1.5rem 1rem;
     margin-top: 1.5rem;
-    max-width: 95%;
+    max-width: 80%;
   }
   .events__bottle-img{
     width: 50px;
@@ -1195,8 +1267,42 @@ right: 6rem;
     justify-content: space-between;
     align-items: center;
   }
+
+  /* Home Slider Responsive */
+  .home__offer-img {
+    width: 400px;
+  }
+
+  .home__navigation {
+    padding: 0 3rem;
+  }
+
+  .home__prev,
+  .home__next {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .home__indicators {
+    bottom: 3rem;
+    gap: 1.5rem;
+  }
+
+  .home__indicator {
+    width: 15px;
+    height: 15px;
+  }
 }
 /* For large devices */
+/* For medium devices */
+@media screen and (min-width: 1024px) {
+  .nav__list{
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+}
+
 @media screen and (min-width: 1150px){
   .container{
     margin-inline: auto;
@@ -1216,7 +1322,7 @@ right: 6rem;
   }
   .nav__list{
     flex-direction: row;
-    column-gap: 4rem;
+    column-gap: 3rem;
   }
   .home__container{
     grid-template-columns: 430px 605px;
@@ -1401,5 +1507,20 @@ right: 6rem;
   
   .private-events__cta {
     text-align: left;
+  }
+}
+
+/* For extra large devices */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .nav__list {
+    column-gap: 4rem;
+  }
+
+  .nav__link {
+    font-size: 1.1rem;
   }
 }
