@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:hashtag2000.github.io)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(dir /s /b)",
+      "Bash(tree:*)",
+      "Bash(git restore:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

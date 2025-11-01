@@ -138,26 +138,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/*=============== HOME SLIDER ===============*/
-document.addEventListener('DOMContentLoaded', function() {
+/*=============== HOME SLIDER - MODERN SWIPER STYLE ===============*/
+(function() {
+    'use strict';
+
+    // Prevent multiple initializations
+    if (window.sliderInitialized) return;
+    window.sliderInitialized = true;
+
     const slides = document.querySelectorAll('.home__slide');
     const indicators = document.querySelectorAll('.home__indicator');
-    const prevBtn = document.getElementById('home-prev');
-    const nextBtn = document.getElementById('home-next');
+    const homeSection = document.getElementById('home');
+
+    if (!slides.length || !indicators.length) return;
 
     let currentSlide = 0;
-    let slideInterval;
+    let slideInterval = null;
+    let isTransitioning = false;
 
-    // Initialize slider
-    function initSlider() {
-        showSlide(0);
-        startAutoSlide();
-    }
-
-    // Show specific slide
+    // Show specific slide with smooth fade transition
     function showSlide(index) {
+        if (isTransitioning) return;
+        if (index === currentSlide) return;
+
+        isTransitioning = true;
+
         // Remove active class from all slides and indicators
-        slides.forEach(slide => slide.classList.remove('active', 'prev'));
+        slides.forEach(slide => slide.classList.remove('active'));
         indicators.forEach(indicator => indicator.classList.remove('active'));
 
         // Add active class to current slide and indicator
@@ -165,6 +172,11 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators[index].classList.add('active');
 
         currentSlide = index;
+
+        // Allow next transition after animation completes
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 600);
     }
 
     // Next slide function
@@ -181,28 +193,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto slide functionality
     function startAutoSlide() {
+        stopAutoSlide(); // Clear any existing interval
         slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
 
     function stopAutoSlide() {
-        clearInterval(slideInterval);
-    }
-
-    // Event listeners for navigation buttons
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            nextSlide();
-            startAutoSlide();
-        });
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            prevSlide();
-            startAutoSlide();
-        });
+        if (slideInterval) {
+            clearInterval(slideInterval);
+            slideInterval = null;
+        }
     }
 
     // Event listeners for indicators
@@ -215,41 +214,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Pause auto-slide on hover
-    const homeSection = document.getElementById('home');
     if (homeSection) {
         homeSection.addEventListener('mouseenter', stopAutoSlide);
         homeSection.addEventListener('mouseleave', startAutoSlide);
-    }
 
-    // Touch/Swipe functionality for mobile
-    let startX = 0;
-    let endX = 0;
+        // Touch/Swipe functionality for mobile
+        let startX = 0;
+        let endX = 0;
 
-    homeSection.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
+        homeSection.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
 
-    homeSection.addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
+        homeSection.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            const swipeThreshold = 50;
+            const diff = startX - endX;
 
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = startX - endX;
-
-        if (Math.abs(diff) > swipeThreshold) {
-            stopAutoSlide();
-            if (diff > 0) {
-                nextSlide(); // Swipe left - next slide
-            } else {
-                prevSlide(); // Swipe right - previous slide
+            if (Math.abs(diff) > swipeThreshold) {
+                stopAutoSlide();
+                if (diff > 0) {
+                    nextSlide(); // Swipe left - next slide
+                } else {
+                    prevSlide(); // Swipe right - previous slide
+                }
+                startAutoSlide();
             }
-            startAutoSlide();
-        }
+        }, { passive: true });
     }
 
     // Initialize the slider
-    initSlider();
-});
+    showSlide(0);
+    startAutoSlide();
+})();
 
