@@ -362,7 +362,7 @@ right: 6rem;
 /* Slider Indicators - Modern Swiper Style */
 .home__indicators {
   position: absolute;
-  bottom: 12rem;
+  bottom: 9rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -1321,7 +1321,7 @@ right: 6rem;
     min-height: 650px;
   }
   .home__indicators{
-    bottom: 2rem;
+    bottom: 1rem;
   }
   .home__offer-container{
     padding: 1.5rem;
@@ -1449,7 +1449,7 @@ right: 6rem;
   }
 
   .home__indicators {
-    bottom: 12rem;
+    bottom: 1rem;
     gap: 1rem;
   }
 }
@@ -1545,7 +1545,7 @@ right: 6rem;
     max-width: 700px;
   }
   .home__indicators{
-    bottom: 12rem;
+    bottom: 1rem;
   }
   .events__title{
     font-size: 5.5rem;
