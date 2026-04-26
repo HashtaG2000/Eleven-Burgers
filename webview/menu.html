@@ -4,987 +4,986 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!--=============== FAVICON ===============-->
    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
-
-   <!--=============== REMIXICONS ===============-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-
-   <!--=============== CSS ===============-->
+   <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet">
    <link rel="stylesheet" href="../css/menu-styles.css">
-   <title>Speisekarte - 11 Burgers</title>
+   <title>Speisekarte — 11 Burgers</title>
 </head>
 
 <body>
-   <!--==================== HEADER ====================-->
-   <header class="header" id="header">
-      <nav class="nav container">
-         <a href="../index.html" class="nav__logo">
-            <div>
-               <img src="../assets/img/elevenburgers.png" alt="logo">
-            </div>
-            11 Burgers
-         </a>
-         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-               <li><a href="#burgers" class="nav__link">Burgers</a></li>
-               <li><a href="#salate" class="nav__link">Salate</a></li>
-               <li><a href="#snacks" class="nav__link">Snacks</a></li>
-               <li><a href="#pommes" class="nav__link">Pommes</a></li>
-               <li><a href="#getranke" class="nav__link">Getränke</a></li>
-               <li><a href="#dessert" class="nav__link">Dessert</a></li>
-            </ul>
-            <div class="nav__close" id="nav-close">
-               <i class="ri-close-large-line"></i>
-            </div>
-         </div>
-         <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-apps-2-line"></i>
-         </div>
 
-      </nav>
-   </header>
+   <!-- ── UTILITY BAR ── -->
+   <div class="utility-bar">
+      <div class="lang-toggle">
+         <button class="lang-btn active" data-lang="de" id="btn-de">DE</button>
+         <span class="lang-sep">|</span>
+         <button class="lang-btn" data-lang="en" id="btn-en">EN</button>
+      </div>
+      <a href="../index.html" class="logo-wordmark">11 Burgers</a>
+      <div class="header-ctas">
+         <a href="../index.html" class="back-btn" data-de="← Zurück" data-en="← Back">← Zurück</a>
+         <a href="tel:+4922171732502" class="btn-reserv" data-de="Reservieren" data-en="Reserve">Reservieren</a>
+      </div>
+   </div>
 
-   <!--==================== MAIN ====================-->
-   <main class="main">
-      <!--==================== HERO ====================-->
-      <section class="hero section">
-         <div class="hero__container container">
-            <div class="hero__content">
-               <h1 class="hero__title">Unsere <br> Speisekarte</h1>
-               <p class="hero__description">
-                  Entdecken Sie unsere vielfältige Auswahl an handgemachten Burgern,
-                  frischen Salaten und köstlichen Snacks.
-               </p>
-               <div class="hero__special">
-                  <div class="special__badge">
-                     <i class="ri-star-fill"></i>
-                     <span>11-Menü Deal</span>
-                  </div>
-                  <div style="display: flex; gap: 1rem; margin: 1rem 0;">
-                     <a href="#11-menu"
-                        style="flex: 1; padding: 1.25rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.2); text-decoration: none; transition: all 0.3s ease; cursor: pointer; display: block;">
-                        <p class="special__text"
-                           style="margin: 0; font-weight: 700; font-size: 1.125rem; color: hsl(45, 100%, 58%);">
-                           Burgerpreis + 8,90€</p>
-                        <p class="special__text" style="margin: 0.5rem 0 0 0; font-size: 0.875rem;">Burger + Beilage +
-                           0,3l Soft Getränke</p>
-                     </a>
-                     <a href="#11-menu"
-                        style="flex: 1; padding: 1.25rem; background: rgba(255, 255, 255, 0.1); border-radius: 0.75rem; border: 2px solid rgba(255, 255, 255, 0.2); text-decoration: none; transition: all 0.3s ease; cursor: pointer; display: block;">
-                        <p class="special__text"
-                           style="margin: 0; font-weight: 700; font-size: 1.125rem; color: hsl(45, 100%, 58%);">
-                           Burgerpreis + 12,50€</p>
-                        <p class="special__text" style="margin: 0.5rem 0 0 0; font-size: 0.875rem;">Burger + Beilage +
-                           Longdrink</p>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+   <!-- ── NAVBAR ── -->
+   <nav class="navbar" id="navbar">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü"><i class="ri-menu-line"></i></button>
+      <div class="nav-links-wrap" id="nav-links">
+         <a class="nav-link active" href="#burgers" data-de="Burgers" data-en="Burgers">Burgers</a>
+         <a class="nav-link" href="#11-menu" data-de="11-Menü" data-en="11-Menu">11-Menü</a>
+         <a class="nav-link" href="#salate" data-de="Salate" data-en="Salads">Salate</a>
+         <a class="nav-link" href="#snacks" data-de="Snacks" data-en="Snacks">Snacks</a>
+         <a class="nav-link" href="#pommes" data-de="Pommes" data-en="Fries">Pommes</a>
+         <a class="nav-link" href="#getranke" data-de="Getränke" data-en="Drinks">Getränke</a>
+         <a class="nav-link" href="#dessert" data-de="Dessert" data-en="Dessert">Dessert</a>
+      </div>
+   </nav>
 
-      <!--==================== BURGERS ====================-->
-      <section class="menu-section section" id="burgers">
+   <main>
+
+      <!-- ── PAGE HERO ── -->
+      <div class="menu-page-hero">
          <div class="container">
-            <h2 class="section__title">Burgers</h2>
+            <span class="hero-eyebrow" data-de="Köln · Blaubach 6–8" data-en="Cologne · Blaubach 6–8">Köln · Blaubach
+               6–8</span>
+            <h1 class="hero-headline" data-de="Unsere Speisekarte" data-en="Our Menu">Unsere Speisekarte</h1>
+            <p class="hero-tagline"
+               data-de="Handgefertigte Burger, frische Salate, ausgewählte Getränke — täglich zubereitet."
+               data-en="Handcrafted burgers, fresh salads, selected drinks — prepared daily.">
+               Handgefertigte Burger, frische Salate, ausgewählte Getränke — täglich zubereitet.
+            </p>
 
-            <!-- Quarter Pounder Section -->
-            <div class="menu__category">
-               <h3 class="category__title">11- Classic Burgers</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Classic Cheeseburger</h4>
-                        <span class="item__price">€11,50</span>
-                     </div>
-                     <p class="item__description">Hausgemachte Sauce, roter Cheddar, karamellisierte Zwiebeln,
-                        Fleischtomate, Eisbergsalat</p>
-                  </div>
-
-
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Chickenburger</h4>
-                        <span class="item__price">€11,50</span>
-                     </div>
-                     <p class="item__description">Roter Cheddar, cremige Mayonnaise, Fleischtomate, Eisbergsalat</p>
-                  </div>
+            <a href="#11-menu" class="deal-banner">
+               <div class="deal-item">
+                  <span class="deal-label" data-de="11-Menü Option 1" data-en="11-Menu Option 1">11-Menü Option 1</span>
+                  <div class="deal-price" data-de="Burgerpreis + 8,90 €" data-en="Burger price + €8.90">Burgerpreis +
+                     8,90 €</div>
+                  <div class="deal-desc" data-de="Burger + Beilage + 0,3 l Soft Getränke"
+                     data-en="Burger + side + 0.3 l soft drink">Burger + Beilage + 0,3 l Soft Getränke</div>
                </div>
-            </div>
-
-            <!-- Premium Burgers Section -->
-            <div class="menu__category">
-               <h3 class="category__title">11-Premium Burgers</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Italien Grando</h4>
-                        <span class="item__price">€15,50</span>
-                     </div>
-                     <p class="item__description">Frisches Pesto, Tomaten, Büffel-Mozzarella,
-                        Lollo Salat, Pico-de-Gallo-Salsa</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">New York Style</h4>
-                        <span class="item__price">€14,00</span>
-                     </div>
-                     <p class="item__description">Zartschmelzender New York Kräuterkäse trifft auf, Bacon, roter
-                        Cheddar, karamellisierte Zwiebeln, Chinakohl Salat, BBQ-Sauce</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Französischer Trüffel-Smash</h4>
-                        <span class="item__price">€14,50</span>
-                     </div>
-                     <p class="item__description">Trüffel-Mayonnaise, französische Blauschimmelkäsesauce, Chilisauce,
-                        roter Cheddar, Lollo-Salat</p>
-                  </div>
-
-                  <div class="menu__item spicy">
-                     <div class="item__header">
-                        <h4 class="item__name">V-11 Spezial <span class="spicy__icon">🌶️🌶️</span></h4>
-                        <span class="item__price">€15,50</span>
-                     </div>
-                     <p class="item__description">Hausgemachte Käsesauce, Hot Sauce, Chili-Öl, Bacon,
-                        Pico-de-Gallo-Salsa, Lollo-Salat</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Tikka</h4>
-                        <span class="item__price">€13,50</span>
-                     </div>
-                     <p class="item__description">Tandoori-Mayonnaise, roten Cheddar, Zwiebeln, Lollo Salat,
-                        Fleischtomate, Zwiebeln fein mariniert in Fenchel und Sternanis</p>
-                  </div>
-
-
-
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Deluxe Smash</h4>
-                        <span class="item__price">€12,00</span>
-                     </div>
-                     <p class="item__description">Doppelter roter Cheddar, Zwiebeln, Gurken, hausgemachte Sauce</p>
-                  </div>
-
+               <div class="deal-item">
+                  <span class="deal-label" data-de="11-Menü Option 2" data-en="11-Menu Option 2">11-Menü Option 2</span>
+                  <div class="deal-price" data-de="Burgerpreis + 12,50 €" data-en="Burger price + €12.50">Burgerpreis +
+                     12,50 €</div>
+                  <div class="deal-desc" data-de="Burger + Beilage + Longdrink" data-en="Burger + side + longdrink">
+                     Burger + Beilage + Longdrink</div>
                </div>
-            </div>
-
-            <!-- Veg/Vegan Burgers Section -->
-            <div class="menu__category">
-               <h3 class="category__title">11-Veg/Vegan</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Paneer</h4>
-                        <span class="item__price">€12,50</span>
-                     </div>
-                     <p class="item__description">Tandoori-Mayonnaise, roter Cheddar, Minz-mayonnaise, Zwiebeln, Lollo
-                        Salat, Fleischtomate, Zwiebeln fein mariniert in Fenchel und Sternanis</p>
-                  </div>
-
-
-
-                  <div class="menu__item vegan">
-                     <div class="item__header">
-                        <h4 class="item__name">J-11 Spezial <span class="vegan__badge">Vegan</span></h4>
-                        <span class="item__price">€14,00</span>
-                     </div>
-                     <p class="item__description">Patty aus Bohnen und sußkartoffel, roasted paprika, vegan Käse,
-                        Fleischtomate, chipotle mayo, knackiger eisbergsalat, Lollo Salat</p>
-                  </div>
-               </div>
-            </div>
-
-
-            <!-- Add-ons Section -->
-            <div class="menu__category">
-               <h3 class="category__title">Premium Touch</h3>
-               <div class="addons__grid">
-                  <div class="addon__item">
-                     <span class="addon__name">Extra Patty 125g</span>
-                     <span class="addon__price">€3,50</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Extra Patty 160g</span>
-                     <span class="addon__price">€4,50</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Bacon</span>
-                     <span class="addon__price">€2,50</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Ei</span>
-                     <span class="addon__price">€2,00</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Roter Cheddar</span>
-                     <span class="addon__price">€1,00</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Chinakohlsalat</span>
-                     <span class="addon__price">€2,00</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Veganer Käse</span>
-                     <span class="addon__price">€1,00</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Tomaten</span>
-                     <span class="addon__price">€1,00</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Salat</span>
-                     <span class="addon__price">€1,00</span>
-                  </div>
-                  <div class="addon__item">
-                     <span class="addon__name">Salsa</span>
-                     <span class="addon__price">€2,00</span>
-                  </div>
-               </div>
-
-               <!-- Dips Section -->
-               <div class="dips__section">
-                  <h4 class="dips__title">Spezial-Dips - €2,50</h4>
-                  <p class="dips__list">Knoblauch Jogurt Sauce, Sichuan Sauce, Tikka Sauce, Minzmayo, Tamarind,
-                     Chili-Mayo, Hausgemachte Sauce, BBQ</p>
-
-                  <h4 class="dips__title">Premium-Dips - €3,50</h4>
-                  <p class="dips__list">Trüffel Vegan Mayonnaise, Blauschimmelkäse Sauce, Käse Sauce, Chilli Cheese
-                     Sauce, Hot Sauce</p>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!--==================== 11-MENÜ ====================-->
-      <section class="menu-section section" id="11-menu">
-         <div class="container">
-            <h2 class="section__title">11-Menü</h2>
-
-            <div class="menu__grid"
-               style="grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr)); gap: 2rem;">
-               <!-- 11-Menü Option 1 -->
-               <div
-                  style="padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 1rem; border: 2px solid rgba(255, 255, 255, 0.1);">
-                  <h3 style="color: hsl(45, 100%, 58%); font-size: 1.5rem; margin-bottom: 1rem;">11-Menü = Burger +
-                     Beilage + 0,3l Getränke</h3>
-                  <p style="color: hsl(45, 100%, 58%); font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">
-                     11-Menü = Burgerpreis + 8,90€</p>
-
-                  <div style="margin-bottom: 1rem;">
-                     <h4 style="color: hsl(0, 0%, 100%); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">
-                        Beilage</h4>
-                     <p style="color: hsl(0, 0%, 85%); font-size: 0.875rem;">Crunchy Pommes, Beilagensalat oder Curly
-                        Fries</p>
-                  </div>
-
-                  <div>
-                     <h4 style="color: hsl(0, 0%, 100%); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">
-                        Getränke</h4>
-                     <p style="color: hsl(0, 0%, 85%); font-size: 0.875rem;">0.3l Soft Getränke oder 0,3l Kölsch</p>
-                     <br>
-                  </div>
-               </div>
-
-               <!-- 11-Menü Option 2 -->
-               <div
-                  style="padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 1rem; border: 2px solid rgba(255, 255, 255, 0.1);">
-                  <h3 style="color: hsl(45, 100%, 58%); font-size: 1.5rem; margin-bottom: 1rem;">11-Menü = Burger +
-                     Beilage + Cocktail</h3>
-                  <p style="color: hsl(45, 100%, 58%); font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">
-                     11-Menü = Burgerpreis + 12,50€</p>
-
-                  <div style="margin-bottom: 1rem;">
-                     <h4 style="color: hsl(0, 0%, 100%); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">
-                        Beilage</h4>
-                     <p style="color: hsl(0, 0%, 85%); font-size: 0.875rem;">Crunchy Pommes, Beilagensalat oder Curly
-                        Fries</p>
-                  </div>
-
-                  <div style="margin-bottom: 1rem;">
-                     <h4 style="color: hsl(0, 0%, 100%); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">
-                        Cocktail</h4>
-                     <p style="color: hsl(0, 0%, 85%); font-size: 0.875rem;">Refreshers Alkoholfrei oder Longdrinks</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!--==================== SALATE ====================-->
-      <section class="menu-section section" id="salate">
-         <div class="container">
-            <h2 class="section__title">Salate</h2>
-            <div class="menu__grid">
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">11-Salat</h4>
-                     <span class="item__price">€12,50</span>
-                  </div>
-                  <p class="item__description">Lollo Bionda, Lollo Rosso, Frisée, Radicchio, Gürkchen, Kirchtomaten,
-                     Rettich, Parmesan, Croutons, Haussalat-Dressing</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Hähnchen Manhattan</h4>
-                     <span class="item__price">€16,00</span>
-                  </div>
-                  <p class="item__description">Hähnchen, Lollo Bionda, Lollo Rosso, Frisée, Radicchio, Gürkchen,
-                     Kirschtomaten, Rettich, Parmesan, Croutons, Haussalat-Dressing</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Prawns Manhattan Salat</h4>
-                     <span class="item__price">€18,00</span>
-                  </div>
-                  <p class="item__description"></p>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!--==================== SNACKS ====================-->
-      <section class="menu-section section" id="snacks">
-         <div class="container">
-            <h2 class="section__title">Snacks & Indie-Snacks</h2>
-
-            <div class="menu__category">
-               <h3 class="category__title">Indie-Snacks</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Samosa</h4>
-                        <span class="item__price">€7,00</span>
-                     </div>
-                     <p class="item__description">mit Tamarinden-Sauce und Minzmayo</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Zwiebeln Pakora</h4>
-                        <span class="item__price">€7,00</span>
-                     </div>
-                     <p class="item__description">mit Tamarinde und Minzmayo</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Samosa Chaat</h4>
-                        <span class="item__price">€10,00</span>
-                     </div>
-                     <p class="item__description">Knusprige Samosa, kartoffel, minzmayo, Tamarinden-Sauce, cremiger
-                        Knoblauch-Joghurt</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Butterfly Prawns</h4>
-                        <span class="item__price">€10,00</span>
-                     </div>
-                     <p class="item__description"></p>
-                  </div>
-
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Chicken & Wings</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Chicken Wings</h4>
-                        <span class="item__price">€9,00</span>
-                     </div>
-                     <p class="item__description">1 Dip nach Wahl aus: BBQ, Sichuan, Knoblauch-Jogurt, Chilimayo,
-                        Minzmayo, Hausgemachte Sauce, Ketchup, Mayonnaise</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Chicken Nuggets (6 Stücke)</h4>
-                        <span class="item__price">€7,50</span>
-                     </div>
-                     <p class="item__description">1 Dip nach Wahl aus: BBQ, Sichuan, Knoblauch-Jogurt, Chilimayo,
-                        Minzmayo, Hausgemachte Sauce, Ketchup, Mayonnaise</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Rind-Käse Bällchen (6 Stücke)</h4>
-                        <span class="item__price">€10,00</span>
-                     </div>
-                     <p class="item__description">1 Dip nach Wahl aus: BBQ, Sichuan, Knoblauch-Jogurt, Chilimayo,
-                        Minzmayo, Hausgemachte Sauce, Ketchup, Mayonnaise</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Golden Mais-Käse Bällchen (4 Stücke)</h4>
-                        <span class="item__price">€8,00</span>
-                     </div>
-                     <p class="item__description">1 Dip nach Wahl aus: BBQ, Sichuan, Knoblauch-Jogurt, Chilimayo,
-                        Minzmayo, Hausgemachte Sauce, Ketchup, Mayonnaise</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Chilli-Cheese Nuggets (6 Stücke)</h4>
-                        <span class="item__price">€7,90</span>
-                     </div>
-                     <p class="item__description">1 Dip nach Wahl aus: BBQ, Sichuan, Knoblauch-Jogurt, Chilisauce,
-                        Minzmayo, Hausgemacht Sauce, Ketchup, Mayonnaise</p>
-                  </div>
-               </div>
-            </div>
-
-
-
-            <div class="menu__category">
-               <h3 class="category__title">Kids Menu</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Kids Hähnchenburger</h4>
-                        <span class="item__price">€6,00</span>
-                     </div>
-                     <p class="item__description">Hähnchen, Mayonaise, Käse, Eisbergsalat</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Kids Cheeseburger</h4>
-                        <span class="item__price">€6,00</span>
-                     </div>
-                     <p class="item__description">Rind, Käse, Ketchup, Gurken</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Kids Pommes</h4>
-                        <span class="item__price">€4,50</span>
-                     </div>
-                     <p class="item__description">Mit ketchup oder Mayonnaise</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!--==================== POMMES ====================-->
-      <section class="menu-section section" id="pommes">
-         <div class="container">
-            <h2 class="section__title">Pommes</h2>
-            <div class="menu__grid">
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Crunchy Pommes</h4>
-                     <span class="item__price">€5,90</span>
-                  </div>
-                  <p class="item__description">Mit Ketchup oder Mayo</p>
-               </div>
-
-
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Trüffel Mayo Pommes</h4>
-                     <span class="item__price">€12,00</span>
-                  </div>
-                  <p class="item__description">Vegane Trüffel-mayonnaise, fine chopped onions, Petersilie, Parmesan,
-                     Trüffel, frische Sprossen</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">V-11 Pommes</h4>
-                     <span class="item__price">€12,00</span>
-                  </div>
-                  <p class="item__description">Käsesauce, Chili-Öl, Pico-de-Gallo-Salsa, frische Sprossen</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Classic Fantastic</h4>
-                     <span class="item__price">€9,50</span>
-                  </div>
-                  <p class="item__description">Mayo, geschnittene Zwiebeln, Petersilie, Parmesan, frische Sprossen</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Guacamole Deluxe</h4>
-                     <span class="item__price">€12,50</span>
-                  </div>
-                  <p class="item__description">Rauchige Chipotle-Mayonnaise, cremiges Guacamole, Knoblauch-Joghurt,
-                     frische Sprossen</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Curly Fries</h4>
-                     <span class="item__price">€6,90</span>
-                  </div>
-                  <p class="item__description"></p>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!--==================== GETRÄNKE ====================-->
-      <section class="menu-section section" id="getranke">
-         <div class="container">
-            <h2 class="section__title">Getränke</h2>
-
-            <div class="menu__category">
-               <h3 class="category__title">Heißgetränke</h3>
-               <div class="drinks__grid">
-                  <div class="drink__item">
-                     <span class="drink__name">Espresso</span>
-                     <span class="drink__price">€2,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Café crème</span>
-                     <span class="drink__price">€3,50</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Doppel espresso</span>
-                     <span class="drink__price">€3,50</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Cappuccino</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Latte Macchiato</span>
-                     <span class="drink__price">€4,50</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Kakao</span>
-                     <span class="drink__price">€4,50</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Tee</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Soft Getränke</h3>
-               <div class="drinks__grid">
-                  <div class="drink__item">
-                     <span class="drink__name">Coca-Cola 0,3l</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Coca-Cola Zero 0,3l</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Fanta 0,3l</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Fuze Ice Tea 0,3l (Pfirsich/Zitrone)</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Fassbrause Zitrone</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Bitburger 0%Alkohol</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Apfelschorle 0,3l</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Wasser (Still/ Medium) 0,5l</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Mezzo Mix</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Milkshakes €8,50</h3>
-               <p class="milkshake__flavors">Auswahl aus Oreo, Double chocolate, Erdbeeren</p>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Refreshers Alkoholfrei</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Berry Blue Lagoon</h4>
-                        <span class="item__price">€8,00</span>
-                     </div>
-                     <p class="item__description">Blue Curacao, Zitrone, Beeren mix, Minze</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">White Punch</h4>
-                        <span class="item__price">€8,00</span>
-                     </div>
-                     <p class="item__description">Ananas, Mango, Kokos, Zitrone, Minze</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Love Island</h4>
-                        <span class="item__price">€8,00</span>
-                     </div>
-                     <p class="item__description">Erdbeeren, Kiwi, Zitrone, Minze</p>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Bier</h3>
-               <div class="drinks__grid">
-                  <div class="drink__item">
-                     <span class="drink__name">Sion Kölsch vom Fass 0,2l</span>
-                     <span class="drink__price">€2,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Sion Kölsch vom Fass 0,3l</span>
-                     <span class="drink__price">€3,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Sion Kölsch vom Fass 0,5l</span>
-                     <span class="drink__price">€5,90</span>
-                  </div>
-                  <div class="drink__item">
-                     <span class="drink__name">Bitburger Pills 0,33l</span>
-                     <span class="drink__price">€4,20</span>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Long Drinks</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Aperol Spritz</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                     <p class="item__description">Aperol, Prosecco, Sodawasser, Orange</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Lillet Wildberry</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                     <p class="item__description">Lilet Blanc, Schweppes wild berry, Himbeere</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Campari Spritz</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                     <p class="item__description">Campri, Prosecco, Sodawasser</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Gin Tonic</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                     <p class="item__description">London Dry Gin, Schweppes Tonic Wasser, Zitronenzeste</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Lime Bloom</h4>
-                        <span class="item__price">€9,00</span>
-                     </div>
-                     <p class="item__description">White Rum, Lime, Lime juice, Minze, Club Soda</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Mango Blush</h4>
-                        <span class="item__price">€9,50</span>
-                     </div>
-                     <p class="item__description">Gin, Mango, Lime, Lime juice, Minze, Club Soda</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Berry Blush</h4>
-                        <span class="item__price">€9,50</span>
-                     </div>
-                     <p class="item__description">White Rum Berry, Lime, Minze, Club Soda</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Blue Lagoon</h4>
-                        <span class="item__price">€9,50</span>
-                     </div>
-                     <p class="item__description">Vodka, Blue Curacao, Minze, Lime, Lime Juice</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Absolut Cola</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Havana Club 3 Cola</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Havana Club 7 Cola</h4>
-                        <span class="item__price">€9,00</span>
-                     </div>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Jack Daniels Cola</h4>
-                        <span class="item__price">€8,50</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Awakening</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Swimming Pool</h4>
-                        <span class="item__price">€11,00</span>
-                     </div>
-                     <p class="item__description">White rum, vodka, Coconut, Ananas, Blue Curracao</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Negroni</h4>
-                        <span class="item__price">€11,00</span>
-                     </div>
-                     <p class="item__description">Gin, Campari, Martini, Zitronenzeste</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">White Lush</h4>
-                        <span class="item__price">€10,50</span>
-                     </div>
-                     <p class="item__description">White Rum, Ananas, Mango, Kokos, Zitrone, Minze</p>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Strawberry Twist</h4>
-                        <span class="item__price">€11,00</span>
-                     </div>
-                     <p class="item__description">White Rum, Vodka, Erdberren, Kiwi, Zitrone, Minze</p>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">Sekt</h3>
-               <div class="menu__grid">
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Geldermann Sekt Rose 0,75l</h4>
-                        <span class="item__price">€45,00</span>
-                     </div>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Scavi und Ray Prosecco 0,75l</h4>
-                        <span class="item__price">€29,00</span>
-                     </div>
-                  </div>
-
-                  <div class="menu__item">
-                     <div class="item__header">
-                        <h4 class="item__name">Scavi und Ray 0,1l</h4>
-                        <span class="item__price">€5,90</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="menu__category">
-               <h3 class="category__title">On the Rocks</h3>
-
-               <h4 class="spirits__category">Gin 4cl</h4>
-               <div class="spirits__grid">
-                  <div class="spirit__item">
-                     <span class="spirit__name">Gordon's London Dry Gin 37,5%</span>
-                     <span class="spirit__price">€6,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Bombay Sapphire 40%</span>
-                     <span class="spirit__price">€7,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Hendricks Gin 44%</span>
-                     <span class="spirit__price">€8,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Roku Japanese Craft 43%</span>
-                     <span class="spirit__price">€8,00</span>
-                  </div>
-               </div>
-
-               <h4 class="spirits__category">Wodka 4cl</h4>
-               <div class="spirits__grid">
-                  <div class="spirit__item">
-                     <span class="spirit__name">Smirnoff Red No.21 37,5%</span>
-                     <span class="spirit__price">€6,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Absolut Vodka 40%</span>
-                     <span class="spirit__price">€7,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Grey Goose 40%</span>
-                     <span class="spirit__price">€10,00</span>
-                  </div>
-               </div>
-
-               <h4 class="spirits__category">Whisky 4cl</h4>
-               <div class="spirits__grid">
-                  <div class="spirit__item">
-                     <span class="spirit__name">Jack Daniel's 40%</span>
-                     <span class="spirit__price">€6,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Glenfiddich Single Malt 12yrs</span>
-                     <span class="spirit__price">€9,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Jameson's Irish 40%</span>
-                     <span class="spirit__price">€7,50</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Johnnie Walker Green Label 15 yrs</span>
-                     <span class="spirit__price">€13,00</span>
-                  </div>
-               </div>
-
-               <h4 class="spirits__category">Rum 4cl</h4>
-               <div class="spirits__grid">
-                  <div class="spirit__item">
-                     <span class="spirit__name">Havana Club 3 37,5%</span>
-                     <span class="spirit__price">€6,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Havana Club 7 40%</span>
-                     <span class="spirit__price">€8,00</span>
-                  </div>
-                  <div class="spirit__item">
-                     <span class="spirit__name">Bacardi Carta Blanc White 37,5%</span>
-                     <span class="spirit__price">€6,00</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!--==================== DESSERT ====================-->
-      <section class="menu-section section" id="dessert">
-         <div class="container">
-            <h2 class="section__title">Dessert</h2>
-            <div class="menu__grid">
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Blueberry Cheesecake</h4>
-                     <span class="item__price">€6,50</span>
-                  </div>
-                  <p class="item__description">Mit fruchtigem Beerenkompott</p>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Brownie Bliss Vanille</h4>
-                     <span class="item__price">€7,50</span>
-                  </div>
-               </div>
-
-               <div class="menu__item">
-                  <div class="item__header">
-                     <h4 class="item__name">Bourbon-Vanille-Eis</h4>
-                     <span class="item__price">€6,50</span>
-                  </div>
-                  <p class="item__description">mit fruchtigem Beerenkompott und feiner Schokoladenerde</p>
-               </div>
-            </div>
-         </div>
-      </section>
-   </main>
-
-   <!--==================== FOOTER ====================-->
-   <footer class="footer">
-      <div class="footer__container container grid">
-         <a href="index.html" class="footer__logo">11 Burgers</a>
-
-         <div class="footer__content grid">
-            <a href="#" class="footer__links">Terms & Agreements</a>
-            <a href="#" class="footer__links">Privacy Policy</a>
-            <div class="footer__social">
-               <a href="tel:+4922171732502" aria-label="Call us">
-                  <i class="ri-phone-fill"></i>
-               </a>
-               <a rel="noopener" href="https://www.facebook.com/profile.php?id=61552233219900" target="_blank"
-                  aria-label="Reach out to me on Facebook">
-                  <i class="ri-facebook-circle-fill"></i>
-               </a>
-               <a rel="noopener" href="mailto:info@11burgers.com" target="_blank" aria-label="Contact me on Email">
-                  <i class="ri-mail-fill"></i>
-               </a>
-            </div>
+            </a>
          </div>
       </div>
-      <span class="footer__copy">
-         &#169; All Rights Reserved By 11 Burgers
-      </span>
+
+      <div class="menu-sections">
+
+         <!-- ── BURGERS ── -->
+         <section class="menu-section" id="burgers">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="01" data-en="01">01</span>
+                  <h2 class="section-title" data-de="Burgers" data-en="Burgers">Burgers</h2>
+               </div>
+
+               <div class="menu-category reveal">
+                  <span class="category-title" data-de="11-Classic Burgers" data-en="11-Classic Burgers">11-Classic
+                     Burgers</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Classic Cheeseburger</div>
+                           <div class="item-desc"
+                              data-de="Hausgemachte Sauce, roter Cheddar, karamellisierte Zwiebeln, Fleischtomate, Eisbergsalat"
+                              data-en="Homemade sauce, red cheddar, caramelised onions, beef tomato, iceberg lettuce">
+                              Hausgemachte Sauce, roter Cheddar, karamellisierte Zwiebeln, Fleischtomate, Eisbergsalat
+                           </div>
+                        </div>
+                        <div class="item-price">€ 11,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Chickenburger</div>
+                           <div class="item-desc"
+                              data-de="Roter Cheddar, cremige Mayonnaise, Fleischtomate, Eisbergsalat"
+                              data-en="Red cheddar, creamy mayonnaise, beef tomato, iceberg lettuce">Roter Cheddar,
+                              cremige Mayonnaise, Fleischtomate, Eisbergsalat</div>
+                        </div>
+                        <div class="item-price">€ 11,50</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:80ms">
+                  <span class="category-title" data-de="11-Premium Burgers" data-en="11-Premium Burgers">11-Premium
+                     Burgers</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Italien Grando</div>
+                           <div class="item-desc"
+                              data-de="Frisches Pesto, Tomaten, Büffel-Mozzarella, Lollo Salat, Pico-de-Gallo-Salsa"
+                              data-en="Fresh pesto, tomatoes, buffalo mozzarella, lollo lettuce, pico de gallo salsa">
+                              Frisches Pesto, Tomaten, Büffel-Mozzarella, Lollo Salat, Pico-de-Gallo-Salsa</div>
+                        </div>
+                        <div class="item-price">€ 15,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">New York Style</div>
+                           <div class="item-desc"
+                              data-de="New York Kräuterkäse, Bacon, roter Cheddar, karamellisierte Zwiebeln, Chinakohl Salat, BBQ-Sauce"
+                              data-en="New York herb cheese, bacon, red cheddar, caramelised onions, Chinese cabbage salad, BBQ sauce">
+                              New York Kräuterkäse, Bacon, roter Cheddar, karamellisierte Zwiebeln, Chinakohl Salat,
+                              BBQ-Sauce</div>
+                        </div>
+                        <div class="item-price">€ 14,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Französischer Trüffel-Smash</div>
+                           <div class="item-desc"
+                              data-de="Trüffel-Mayonnaise, französische Blauschimmelkäsesauce, Chilisauce, roter Cheddar, Lollo-Salat"
+                              data-en="Truffle mayonnaise, French blue cheese sauce, chilli sauce, red cheddar, lollo lettuce">
+                              Trüffel-Mayonnaise, französische Blauschimmelkäsesauce, Chilisauce, roter Cheddar,
+                              Lollo-Salat</div>
+                        </div>
+                        <div class="item-price">€ 14,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">V-11 Spezial <span class="item-badge spicy" data-de="Scharf"
+                                 data-en="Spicy">Scharf</span></div>
+                           <div class="item-desc"
+                              data-de="Hausgemachte Käsesauce, Hot Sauce, Chili-Öl, Bacon, Pico-de-Gallo-Salsa, Lollo-Salat"
+                              data-en="Homemade cheese sauce, hot sauce, chilli oil, bacon, pico de gallo salsa, lollo lettuce">
+                              Hausgemachte Käsesauce, Hot Sauce, Chili-Öl, Bacon, Pico-de-Gallo-Salsa, Lollo-Salat</div>
+                        </div>
+                        <div class="item-price">€ 15,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Tikka</div>
+                           <div class="item-desc"
+                              data-de="Tandoori-Mayonnaise, roter Cheddar, Zwiebeln, Lollo Salat, Fleischtomate, Zwiebeln mariniert in Fenchel und Sternanis"
+                              data-en="Tandoori mayonnaise, red cheddar, onions, lollo lettuce, beef tomato, onions marinated in fennel and star anise">
+                              Tandoori-Mayonnaise, roter Cheddar, Zwiebeln, Lollo Salat, Fleischtomate, Zwiebeln
+                              mariniert in Fenchel und Sternanis</div>
+                        </div>
+                        <div class="item-price">€ 13,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Deluxe Smash</div>
+                           <div class="item-desc"
+                              data-de="Doppelter roter Cheddar, Zwiebeln, Gurken, hausgemachte Sauce"
+                              data-en="Double red cheddar, onions, pickles, homemade sauce">Doppelter roter Cheddar,
+                              Zwiebeln, Gurken, hausgemachte Sauce</div>
+                        </div>
+                        <div class="item-price">€ 12,00</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:160ms">
+                  <span class="category-title" data-de="11-Veg / Vegan" data-en="11-Veg / Vegan">11-Veg / Vegan</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Paneer</div>
+                           <div class="item-desc"
+                              data-de="Tandoori-Mayonnaise, roter Cheddar, Minzmayonnaise, Zwiebeln, Lollo Salat, Fleischtomate, Zwiebeln mariniert in Fenchel und Sternanis"
+                              data-en="Tandoori mayonnaise, red cheddar, mint mayonnaise, onions, lollo lettuce, beef tomato, onions marinated in fennel and star anise">
+                              Tandoori-Mayonnaise, roter Cheddar, Minzmayonnaise, Zwiebeln, Lollo Salat, Fleischtomate,
+                              Zwiebeln mariniert in Fenchel und Sternanis</div>
+                        </div>
+                        <div class="item-price">€ 12,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">J-11 Spezial <span class="item-badge vegan" data-de="Vegan"
+                                 data-en="Vegan">Vegan</span></div>
+                           <div class="item-desc"
+                              data-de="Patty aus Bohnen und Süßkartoffel, roasted Paprika, veganer Käse, Fleischtomate, Chipotle Mayo, Eisbergsalat, Lollo Salat"
+                              data-en="Bean and sweet potato patty, roasted peppers, vegan cheese, beef tomato, chipotle mayo, iceberg lettuce, lollo lettuce">
+                              Patty aus Bohnen und Süßkartoffel, roasted Paprika, veganer Käse, Fleischtomate, Chipotle
+                              Mayo, Eisbergsalat, Lollo Salat</div>
+                        </div>
+                        <div class="item-price">€ 14,00</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:240ms">
+                  <span class="category-title" data-de="Premium Touch" data-en="Premium Touch">Premium Touch</span>
+                  <div class="addons-grid">
+                     <div class="addon-item"><span class="addon-name" data-de="Extra Patty 125g"
+                           data-en="Extra Patty 125g">Extra Patty 125g</span><span class="addon-price">€ 3,50</span>
+                     </div>
+                     <div class="addon-item"><span class="addon-name" data-de="Extra Patty 160g"
+                           data-en="Extra Patty 160g">Extra Patty 160g</span><span class="addon-price">€ 4,50</span>
+                     </div>
+                     <div class="addon-item"><span class="addon-name" data-de="Bacon" data-en="Bacon">Bacon</span><span
+                           class="addon-price">€ 2,50</span></div>
+                     <div class="addon-item"><span class="addon-name" data-de="Ei" data-en="Egg">Ei</span><span
+                           class="addon-price">€ 2,00</span></div>
+                     <div class="addon-item"><span class="addon-name" data-de="Roter Cheddar"
+                           data-en="Red Cheddar">Roter Cheddar</span><span class="addon-price">€ 1,00</span></div>
+                     <div class="addon-item"><span class="addon-name" data-de="Chinakohlsalat"
+                           data-en="Chinese Cabbage Salad">Chinakohlsalat</span><span class="addon-price">€ 2,00</span>
+                     </div>
+                     <div class="addon-item"><span class="addon-name" data-de="Veganer Käse"
+                           data-en="Vegan Cheese">Veganer Käse</span><span class="addon-price">€ 1,00</span></div>
+                     <div class="addon-item"><span class="addon-name" data-de="Tomaten"
+                           data-en="Tomatoes">Tomaten</span><span class="addon-price">€ 1,00</span></div>
+                     <div class="addon-item"><span class="addon-name" data-de="Salat"
+                           data-en="Lettuce">Salat</span><span class="addon-price">€ 1,00</span></div>
+                     <div class="addon-item"><span class="addon-name" data-de="Salsa" data-en="Salsa">Salsa</span><span
+                           class="addon-price">€ 2,00</span></div>
+                  </div>
+                  <div class="dips-section">
+                     <span class="dips-title" data-de="Spezial-Dips — € 2,50"
+                        data-en="Special Dips — € 2.50">Spezial-Dips — € 2,50</span>
+                     <p class="dips-list"
+                        data-de="Knoblauch Joghurt Sauce · Sichuan Sauce · Tikka Sauce · Minzmayo · Tamarind · Chili-Mayo · Hausgemachte Sauce · BBQ"
+                        data-en="Garlic yoghurt sauce · Sichuan sauce · Tikka sauce · Mint mayo · Tamarind · Chilli mayo · Homemade sauce · BBQ">
+                        Knoblauch Joghurt Sauce · Sichuan Sauce · Tikka Sauce · Minzmayo · Tamarind · Chili-Mayo ·
+                        Hausgemachte Sauce · BBQ</p>
+                     <span class="dips-title" data-de="Premium-Dips — € 3,50"
+                        data-en="Premium Dips — € 3.50">Premium-Dips — € 3,50</span>
+                     <p class="dips-list"
+                        data-de="Trüffel Vegan Mayonnaise · Blauschimmelkäse Sauce · Käse Sauce · Chilli Cheese Sauce · Hot Sauce"
+                        data-en="Truffle vegan mayonnaise · Blue cheese sauce · Cheese sauce · Chilli cheese sauce · Hot sauce">
+                        Trüffel Vegan Mayonnaise · Blauschimmelkäse Sauce · Käse Sauce · Chilli Cheese Sauce · Hot Sauce
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ── 11-MENÜ ── -->
+         <section class="menu-section" id="11-menu" style="background:var(--bg-alt)">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="02" data-en="02">02</span>
+                  <h2 class="section-title" data-de="11-Menü" data-en="11-Menu">11-Menü</h2>
+               </div>
+               <div class="menu-deal-grid reveal" style="transition-delay:80ms">
+                  <div class="menu-deal-block">
+                     <div class="deal-block-title" data-de="Burger + Beilage + 0,3 l Getränke"
+                        data-en="Burger + side + 0.3 l drink">Burger + Beilage + 0,3 l Getränke</div>
+                     <div class="deal-block-price" data-de="Burgerpreis + 8,90 €" data-en="Burger price + €8.90">
+                        Burgerpreis + 8,90 €</div>
+                     <div class="deal-block-row">
+                        <span class="deal-block-label" data-de="Beilage" data-en="Side">Beilage</span>
+                        <div class="deal-block-val" data-de="Crunchy Pommes, Beilagensalat oder Curly Fries"
+                           data-en="Crunchy fries, side salad, or curly fries">Crunchy Pommes, Beilagensalat oder Curly
+                           Fries</div>
+                     </div>
+                     <div class="deal-block-row">
+                        <span class="deal-block-label" data-de="Getränke" data-en="Drink">Getränke</span>
+                        <div class="deal-block-val" data-de="0,3 l Soft Getränke oder 0,3 l Kölsch"
+                           data-en="0.3 l soft drink or 0.3 l Kölsch">0,3 l Soft Getränke oder 0,3 l Kölsch</div>
+                     </div>
+                  </div>
+                  <div class="menu-deal-block">
+                     <div class="deal-block-title" data-de="Burger + Beilage + Cocktail"
+                        data-en="Burger + side + cocktail">Burger + Beilage + Cocktail</div>
+                     <div class="deal-block-price" data-de="Burgerpreis + 12,50 €" data-en="Burger price + €12.50">
+                        Burgerpreis + 12,50 €</div>
+                     <div class="deal-block-row">
+                        <span class="deal-block-label" data-de="Beilage" data-en="Side">Beilage</span>
+                        <div class="deal-block-val" data-de="Crunchy Pommes, Beilagensalat oder Curly Fries"
+                           data-en="Crunchy fries, side salad, or curly fries">Crunchy Pommes, Beilagensalat oder Curly
+                           Fries</div>
+                     </div>
+                     <div class="deal-block-row">
+                        <span class="deal-block-label" data-de="Cocktail" data-en="Cocktail">Cocktail</span>
+                        <div class="deal-block-val" data-de="Refreshers Alkoholfrei oder Longdrinks"
+                           data-en="Alcohol-free refreshers or longdrinks">Refreshers Alkoholfrei oder Longdrinks</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ── SALATE ── -->
+         <section class="menu-section" id="salate">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="03" data-en="03">03</span>
+                  <h2 class="section-title" data-de="Salate" data-en="Salads">Salate</h2>
+               </div>
+               <div class="menu-list reveal" style="transition-delay:80ms">
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">11-Salat</div>
+                        <div class="item-desc"
+                           data-de="Lollo Bionda, Lollo Rosso, Frisée, Radicchio, Gürkchen, Kirschtomaten, Rettich, Parmesan, Croutons, Haussalat-Dressing"
+                           data-en="Lollo bionda, lollo rosso, frisée, radicchio, gherkins, cherry tomatoes, radish, Parmesan, croutons, house dressing">
+                           Lollo Bionda, Lollo Rosso, Frisée, Radicchio, Gürkchen, Kirschtomaten, Rettich, Parmesan,
+                           Croutons, Haussalat-Dressing</div>
+                     </div>
+                     <div class="item-price">€ 12,50</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Hähnchen Manhattan</div>
+                        <div class="item-desc"
+                           data-de="Hähnchen, Lollo Bionda, Lollo Rosso, Frisée, Radicchio, Gürkchen, Kirschtomaten, Rettich, Parmesan, Croutons, Haussalat-Dressing"
+                           data-en="Chicken, lollo bionda, lollo rosso, frisée, radicchio, gherkins, cherry tomatoes, radish, Parmesan, croutons, house dressing">
+                           Hähnchen, Lollo Bionda, Lollo Rosso, Frisée, Radicchio, Gürkchen, Kirschtomaten, Rettich,
+                           Parmesan, Croutons, Haussalat-Dressing</div>
+                     </div>
+                     <div class="item-price">€ 16,00</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Prawns Manhattan Salat</div>
+                     </div>
+                     <div class="item-price">€ 18,00</div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ── SNACKS ── -->
+         <section class="menu-section" id="snacks" style="background:var(--bg-alt)">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="04" data-en="04">04</span>
+                  <h2 class="section-title" data-de="Snacks &amp; Indie-Snacks" data-en="Snacks &amp; Indie-Snacks">
+                     Snacks &amp; Indie-Snacks</h2>
+               </div>
+
+               <div class="menu-category reveal">
+                  <span class="category-title" data-de="Indie-Snacks" data-en="Indie-Snacks">Indie-Snacks</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Samosa</div>
+                           <div class="item-desc" data-de="mit Tamarinden-Sauce und Minzmayo"
+                              data-en="with tamarind sauce and mint mayo">mit Tamarinden-Sauce und Minzmayo</div>
+                        </div>
+                        <div class="item-price">€ 7,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Zwiebeln Pakora</div>
+                           <div class="item-desc" data-de="mit Tamarinde und Minzmayo"
+                              data-en="with tamarind and mint mayo">mit Tamarinde und Minzmayo</div>
+                        </div>
+                        <div class="item-price">€ 7,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Samosa Chaat</div>
+                           <div class="item-desc"
+                              data-de="Knusprige Samosa, Kartoffel, Minzmayo, Tamarinden-Sauce, cremiger Knoblauch-Joghurt"
+                              data-en="Crispy samosa, potato, mint mayo, tamarind sauce, creamy garlic yoghurt">
+                              Knusprige Samosa, Kartoffel, Minzmayo, Tamarinden-Sauce, cremiger Knoblauch-Joghurt</div>
+                        </div>
+                        <div class="item-price">€ 10,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Butterfly Prawns</div>
+                        </div>
+                        <div class="item-price">€ 10,00</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:80ms">
+                  <span class="category-title" data-de="Chicken &amp; Wings" data-en="Chicken &amp; Wings">Chicken &amp;
+                     Wings</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Chicken Wings</div>
+                           <div class="item-desc"
+                              data-de="1 Dip nach Wahl: BBQ, Sichuan, Knoblauch-Joghurt, Chilimayo, Minzmayo, Hausgemachte Sauce, Ketchup, Mayonnaise"
+                              data-en="1 dip of your choice: BBQ, Sichuan, garlic yoghurt, chilli mayo, mint mayo, homemade sauce, ketchup, mayonnaise">
+                              1 Dip nach Wahl: BBQ, Sichuan, Knoblauch-Joghurt, Chilimayo, Minzmayo, Hausgemachte Sauce,
+                              Ketchup, Mayonnaise</div>
+                        </div>
+                        <div class="item-price">€ 9,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Chicken Nuggets <span
+                                 style="font-family:var(--sans);font-size:0.75rem;color:var(--dim)">(6 Stücke)</span>
+                           </div>
+                           <div class="item-desc" data-de="1 Dip nach Wahl" data-en="1 dip of your choice">1 Dip nach
+                              Wahl</div>
+                        </div>
+                        <div class="item-price">€ 7,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Rind-Käse Bällchen <span
+                                 style="font-family:var(--sans);font-size:0.75rem;color:var(--dim)">(6 Stücke)</span>
+                           </div>
+                           <div class="item-desc" data-de="1 Dip nach Wahl" data-en="1 dip of your choice">1 Dip nach
+                              Wahl</div>
+                        </div>
+                        <div class="item-price">€ 10,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Golden Mais-Käse Bällchen <span
+                                 style="font-family:var(--sans);font-size:0.75rem;color:var(--dim)">(4 Stücke)</span>
+                           </div>
+                           <div class="item-desc" data-de="1 Dip nach Wahl" data-en="1 dip of your choice">1 Dip nach
+                              Wahl</div>
+                        </div>
+                        <div class="item-price">€ 8,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Chilli-Cheese Nuggets <span
+                                 style="font-family:var(--sans);font-size:0.75rem;color:var(--dim)">(6 Stücke)</span>
+                           </div>
+                           <div class="item-desc" data-de="1 Dip nach Wahl" data-en="1 dip of your choice">1 Dip nach
+                              Wahl</div>
+                        </div>
+                        <div class="item-price">€ 7,90</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:160ms">
+                  <span class="category-title" data-de="Kids Menu" data-en="Kids Menu">Kids Menu</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Kids Hähnchenburger</div>
+                           <div class="item-desc" data-de="Hähnchen, Mayonnaise, Käse, Eisbergsalat"
+                              data-en="Chicken, mayonnaise, cheese, iceberg lettuce">Hähnchen, Mayonnaise, Käse,
+                              Eisbergsalat</div>
+                        </div>
+                        <div class="item-price">€ 6,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Kids Cheeseburger</div>
+                           <div class="item-desc" data-de="Rind, Käse, Ketchup, Gurken"
+                              data-en="Beef, cheese, ketchup, pickles">Rind, Käse, Ketchup, Gurken</div>
+                        </div>
+                        <div class="item-price">€ 6,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Kids Pommes</div>
+                           <div class="item-desc" data-de="Mit Ketchup oder Mayonnaise"
+                              data-en="With ketchup or mayonnaise">Mit Ketchup oder Mayonnaise</div>
+                        </div>
+                        <div class="item-price">€ 4,50</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ── POMMES ── -->
+         <section class="menu-section" id="pommes">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="05" data-en="05">05</span>
+                  <h2 class="section-title" data-de="Pommes" data-en="Fries">Pommes</h2>
+               </div>
+               <div class="menu-list reveal" style="transition-delay:80ms">
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Crunchy Pommes</div>
+                        <div class="item-desc" data-de="Mit Ketchup oder Mayo" data-en="With ketchup or mayo">Mit
+                           Ketchup oder Mayo</div>
+                     </div>
+                     <div class="item-price">€ 5,90</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Trüffel Mayo Pommes</div>
+                        <div class="item-desc"
+                           data-de="Vegane Trüffel-Mayonnaise, fein gehackte Zwiebeln, Petersilie, Parmesan, Trüffel, frische Sprossen"
+                           data-en="Vegan truffle mayonnaise, finely chopped onions, parsley, Parmesan, truffle, fresh sprouts">
+                           Vegane Trüffel-Mayonnaise, fein gehackte Zwiebeln, Petersilie, Parmesan, Trüffel, frische
+                           Sprossen</div>
+                     </div>
+                     <div class="item-price">€ 12,00</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">V-11 Pommes</div>
+                        <div class="item-desc" data-de="Käsesauce, Chili-Öl, Pico-de-Gallo-Salsa, frische Sprossen"
+                           data-en="Cheese sauce, chilli oil, pico de gallo salsa, fresh sprouts">Käsesauce, Chili-Öl,
+                           Pico-de-Gallo-Salsa, frische Sprossen</div>
+                     </div>
+                     <div class="item-price">€ 12,00</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Classic Fantastic</div>
+                        <div class="item-desc"
+                           data-de="Mayo, geschnittene Zwiebeln, Petersilie, Parmesan, frische Sprossen"
+                           data-en="Mayo, sliced onions, parsley, Parmesan, fresh sprouts">Mayo, geschnittene Zwiebeln,
+                           Petersilie, Parmesan, frische Sprossen</div>
+                     </div>
+                     <div class="item-price">€ 9,50</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Guacamole Deluxe</div>
+                        <div class="item-desc"
+                           data-de="Rauchige Chipotle-Mayonnaise, cremiges Guacamole, Knoblauch-Joghurt, frische Sprossen"
+                           data-en="Smoky chipotle mayonnaise, creamy guacamole, garlic yoghurt, fresh sprouts">Rauchige
+                           Chipotle-Mayonnaise, cremiges Guacamole, Knoblauch-Joghurt, frische Sprossen</div>
+                     </div>
+                     <div class="item-price">€ 12,50</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Curly Fries</div>
+                     </div>
+                     <div class="item-price">€ 6,90</div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ── GETRÄNKE ── -->
+         <section class="menu-section" id="getranke" style="background:var(--bg-alt)">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="06" data-en="06">06</span>
+                  <h2 class="section-title" data-de="Getränke" data-en="Drinks">Getränke</h2>
+               </div>
+
+               <div class="menu-category reveal">
+                  <span class="category-title" data-de="Heißgetränke" data-en="Hot Drinks">Heißgetränke</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Espresso</span><span class="drink-price">€
+                           2,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Café crème</span><span class="drink-price">€
+                           3,50</span></div>
+                     <div class="drink-item"><span class="drink-name">Doppel Espresso</span><span class="drink-price">€
+                           3,50</span></div>
+                     <div class="drink-item"><span class="drink-name">Cappuccino</span><span class="drink-price">€
+                           3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Latte Macchiato</span><span class="drink-price">€
+                           4,50</span></div>
+                     <div class="drink-item"><span class="drink-name">Kakao</span><span class="drink-price">€
+                           4,50</span></div>
+                     <div class="drink-item"><span class="drink-name">Tee</span><span class="drink-price">€ 3,90</span>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:60ms">
+                  <span class="category-title" data-de="Soft Getränke" data-en="Soft Drinks">Soft Getränke</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Coca-Cola 0,3 l</span><span class="drink-price">€
+                           3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Coca-Cola Zero 0,3 l</span><span
+                           class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Fanta 0,3 l</span><span class="drink-price">€
+                           3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Fuze Ice Tea 0,3 l (Pfirsich /
+                           Zitrone)</span><span class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Fassbrause Zitrone</span><span
+                           class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Bitburger 0% Alkohol</span><span
+                           class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Apfelschorle 0,3 l</span><span
+                           class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Wasser (Still / Medium) 0,5 l</span><span
+                           class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Mezzo Mix</span><span class="drink-price">€
+                           3,90</span></div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:120ms">
+                  <span class="category-title" data-de="Milkshakes" data-en="Milkshakes">Milkshakes — € 8,50</span>
+                  <p class="dips-list" data-de="Oreo · Double Chocolate · Erdbeeren"
+                     data-en="Oreo · Double Chocolate · Strawberry">Oreo · Double Chocolate · Erdbeeren</p>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:140ms">
+                  <span class="category-title" data-de="Refreshers Alkoholfrei"
+                     data-en="Non-Alcoholic Refreshers">Refreshers Alkoholfrei</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Berry Blue Lagoon</div>
+                           <div class="item-desc" data-de="Blue Curacao, Zitrone, Beerenmix, Minze"
+                              data-en="Blue Curaçao, lemon, berry mix, mint">Blue Curacao, Zitrone, Beerenmix, Minze
+                           </div>
+                        </div>
+                        <div class="item-price">€ 8,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">White Punch</div>
+                           <div class="item-desc" data-de="Ananas, Mango, Kokos, Zitrone, Minze"
+                              data-en="Pineapple, mango, coconut, lemon, mint">Ananas, Mango, Kokos, Zitrone, Minze
+                           </div>
+                        </div>
+                        <div class="item-price">€ 8,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Love Island</div>
+                           <div class="item-desc" data-de="Erdbeeren, Kiwi, Zitrone, Minze"
+                              data-en="Strawberries, kiwi, lemon, mint">Erdbeeren, Kiwi, Zitrone, Minze</div>
+                        </div>
+                        <div class="item-price">€ 8,00</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:160ms">
+                  <span class="category-title" data-de="Bier" data-en="Beer">Bier</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Sion Kölsch vom Fass 0,2 l</span><span
+                           class="drink-price">€ 2,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Sion Kölsch vom Fass 0,3 l</span><span
+                           class="drink-price">€ 3,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Sion Kölsch vom Fass 0,5 l</span><span
+                           class="drink-price">€ 5,90</span></div>
+                     <div class="drink-item"><span class="drink-name">Bitburger Pills 0,33 l</span><span
+                           class="drink-price">€ 4,20</span></div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:180ms">
+                  <span class="category-title" data-de="Long Drinks" data-en="Long Drinks">Long Drinks</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Aperol Spritz</div>
+                           <div class="item-desc" data-de="Aperol, Prosecco, Sodawasser, Orange"
+                              data-en="Aperol, Prosecco, soda water, orange">Aperol, Prosecco, Sodawasser, Orange</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Lillet Wildberry</div>
+                           <div class="item-desc" data-de="Lillet Blanc, Schweppes Wild Berry, Himbeere"
+                              data-en="Lillet Blanc, Schweppes wild berry, raspberry">Lillet Blanc, Schweppes Wild
+                              Berry, Himbeere</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Campari Spritz</div>
+                           <div class="item-desc" data-de="Campari, Prosecco, Sodawasser"
+                              data-en="Campari, Prosecco, soda water">Campari, Prosecco, Sodawasser</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Gin Tonic</div>
+                           <div class="item-desc" data-de="London Dry Gin, Schweppes Tonic, Zitronenzeste"
+                              data-en="London Dry Gin, Schweppes tonic, lemon zest">London Dry Gin, Schweppes Tonic,
+                              Zitronenzeste</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Lime Bloom</div>
+                           <div class="item-desc" data-de="White Rum, Lime, Lime Juice, Minze, Club Soda"
+                              data-en="White rum, lime, lime juice, mint, club soda">White Rum, Lime, Lime Juice, Minze,
+                              Club Soda</div>
+                        </div>
+                        <div class="item-price">€ 9,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Mango Blush</div>
+                           <div class="item-desc" data-de="Gin, Mango, Lime, Lime Juice, Minze, Club Soda"
+                              data-en="Gin, mango, lime, lime juice, mint, club soda">Gin, Mango, Lime, Lime Juice,
+                              Minze, Club Soda</div>
+                        </div>
+                        <div class="item-price">€ 9,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Berry Blush</div>
+                           <div class="item-desc" data-de="White Rum Berry, Lime, Minze, Club Soda"
+                              data-en="White rum berry, lime, mint, club soda">White Rum Berry, Lime, Minze, Club Soda
+                           </div>
+                        </div>
+                        <div class="item-price">€ 9,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Blue Lagoon</div>
+                           <div class="item-desc" data-de="Vodka, Blue Curacao, Minze, Lime, Lime Juice"
+                              data-en="Vodka, blue curaçao, mint, lime, lime juice">Vodka, Blue Curacao, Minze, Lime,
+                              Lime Juice</div>
+                        </div>
+                        <div class="item-price">€ 9,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Absolut Cola</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Havana Club 3 Cola</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Havana Club 7 Cola</div>
+                        </div>
+                        <div class="item-price">€ 9,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Jack Daniels Cola</div>
+                        </div>
+                        <div class="item-price">€ 8,50</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:200ms">
+                  <span class="category-title" data-de="Awakening" data-en="Awakening">Awakening</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Swimming Pool</div>
+                           <div class="item-desc" data-de="White Rum, Vodka, Kokos, Ananas, Blue Curacao"
+                              data-en="White rum, vodka, coconut, pineapple, blue curaçao">White Rum, Vodka, Kokos,
+                              Ananas, Blue Curacao</div>
+                        </div>
+                        <div class="item-price">€ 11,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Negroni</div>
+                           <div class="item-desc" data-de="Gin, Campari, Martini, Zitronenzeste"
+                              data-en="Gin, Campari, Martini, lemon zest">Gin, Campari, Martini, Zitronenzeste</div>
+                        </div>
+                        <div class="item-price">€ 11,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">White Lush</div>
+                           <div class="item-desc" data-de="White Rum, Ananas, Mango, Kokos, Zitrone, Minze"
+                              data-en="White rum, pineapple, mango, coconut, lemon, mint">White Rum, Ananas, Mango,
+                              Kokos, Zitrone, Minze</div>
+                        </div>
+                        <div class="item-price">€ 10,50</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Strawberry Twist</div>
+                           <div class="item-desc" data-de="White Rum, Vodka, Erdbeeren, Kiwi, Zitrone, Minze"
+                              data-en="White rum, vodka, strawberries, kiwi, lemon, mint">White Rum, Vodka, Erdbeeren,
+                              Kiwi, Zitrone, Minze</div>
+                        </div>
+                        <div class="item-price">€ 11,00</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:220ms">
+                  <span class="category-title" data-de="Sekt" data-en="Sparkling Wine">Sekt</span>
+                  <div class="menu-list">
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Geldermann Sekt Rosé 0,75 l</div>
+                        </div>
+                        <div class="item-price">€ 45,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Scavi &amp; Ray Prosecco 0,75 l</div>
+                        </div>
+                        <div class="item-price">€ 29,00</div>
+                     </div>
+                     <div class="menu-item">
+                        <div>
+                           <div class="item-name">Scavi &amp; Ray 0,1 l</div>
+                        </div>
+                        <div class="item-price">€ 5,90</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="menu-category reveal" style="transition-delay:240ms">
+                  <span class="category-title" data-de="On the Rocks" data-en="On the Rocks">On the Rocks</span>
+                  <span class="spirits-subtitle">Gin 4 cl</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Gordon's London Dry Gin 37,5%</span><span
+                           class="drink-price">€ 6,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Bombay Sapphire 40%</span><span
+                           class="drink-price">€ 7,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Hendricks Gin 44%</span><span
+                           class="drink-price">€ 8,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Roku Japanese Craft 43%</span><span
+                           class="drink-price">€ 8,00</span></div>
+                  </div>
+                  <span class="spirits-subtitle">Wodka 4 cl</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Smirnoff Red No.21 37,5%</span><span
+                           class="drink-price">€ 6,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Absolut Vodka 40%</span><span
+                           class="drink-price">€ 7,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Grey Goose 40%</span><span class="drink-price">€
+                           10,00</span></div>
+                  </div>
+                  <span class="spirits-subtitle">Whisky 4 cl</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Jack Daniel's 40%</span><span
+                           class="drink-price">€ 6,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Glenfiddich Single Malt 12yrs</span><span
+                           class="drink-price">€ 9,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Jameson's Irish 40%</span><span
+                           class="drink-price">€ 7,50</span></div>
+                     <div class="drink-item"><span class="drink-name">Johnnie Walker Green Label 15 yrs</span><span
+                           class="drink-price">€ 13,00</span></div>
+                  </div>
+                  <span class="spirits-subtitle">Rum 4 cl</span>
+                  <div class="drinks-list">
+                     <div class="drink-item"><span class="drink-name">Havana Club 3 37,5%</span><span
+                           class="drink-price">€ 6,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Havana Club 7 40%</span><span
+                           class="drink-price">€ 8,00</span></div>
+                     <div class="drink-item"><span class="drink-name">Bacardi Carta Blanc 37,5%</span><span
+                           class="drink-price">€ 6,00</span></div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- ── DESSERT ── -->
+         <section class="menu-section" id="dessert">
+            <div class="container">
+               <div class="section-header reveal">
+                  <span class="section-eyebrow" data-de="07" data-en="07">07</span>
+                  <h2 class="section-title" data-de="Dessert" data-en="Dessert">Dessert</h2>
+               </div>
+               <div class="menu-list reveal" style="transition-delay:80ms">
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Blueberry Cheesecake</div>
+                        <div class="item-desc" data-de="Mit fruchtigem Beerenkompott"
+                           data-en="With fruity berry compote">Mit fruchtigem Beerenkompott</div>
+                     </div>
+                     <div class="item-price">€ 6,50</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Brownie Bliss Vanille</div>
+                     </div>
+                     <div class="item-price">€ 7,50</div>
+                  </div>
+                  <div class="menu-item">
+                     <div>
+                        <div class="item-name">Bourbon-Vanille-Eis</div>
+                        <div class="item-desc" data-de="Mit fruchtigem Beerenkompott und feiner Schokoladenerde"
+                           data-en="With fruity berry compote and fine chocolate soil">Mit fruchtigem Beerenkompott und
+                           feiner Schokoladenerde</div>
+                     </div>
+                     <div class="item-price">€ 6,50</div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </div>
+   </main>
+
+   <!-- ── FOOTER ── -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer-inner">
+            <span class="footer-logo">11 Burgers</span>
+            <div class="footer-links">
+               <a class="footer-link" href="../terms.html" data-de="AGB" data-en="Terms">AGB</a>
+               <a class="footer-link" href="../privacy-policy.html" data-de="Datenschutz"
+                  data-en="Privacy">Datenschutz</a>
+            </div>
+            <div class="social-links">
+               <a class="social-link" href="tel:+4922171732502" aria-label="Telefon"><i class="ri-phone-line"></i></a>
+               <a class="social-link" href="https://www.facebook.com/profile.php?id=61552233219900" target="_blank"
+                  rel="noopener" aria-label="Facebook"><i class="ri-facebook-line"></i></a>
+               <a class="social-link" href="mailto:info@11burgers.com" aria-label="E-Mail"><i
+                     class="ri-mail-line"></i></a>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <span class="footer-copy" data-de="© 2024 11 Burgers Köln. Alle Rechte vorbehalten."
+               data-en="© 2024 11 Burgers Cologne. All rights reserved.">© 2024 11 Burgers Köln. Alle Rechte
+               vorbehalten.</span>
+         </div>
+      </div>
    </footer>
 
-   <!--========== SCROLL UP ==========-->
-   <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll up">
-      <i class="ri-arrow-up-line"></i>
-   </a>
+   <a href="#" class="scroll-up" id="scroll-up" aria-label="Nach oben"><i class="ri-arrow-up-line"></i></a>
 
-   <!--=============== SCROLLREVEAL ===============-->
-   <script src="../js/scrollreveal.min.js"></script>
+   <script>
+      /* ─── IntersectionObserver reveals ─── */
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      revealEls.forEach(el => observer.observe(el));
 
-   <!--=============== MAIN JS ===============-->
-   <script src="../js/menu.js"></script>
+      /* ─── Scroll behaviors ─── */
+      window.addEventListener('scroll', () => {
+         const y = window.scrollY;
+         document.getElementById('scroll-up').classList.toggle('show', y > 400);
+      }, { passive: true });
+
+      /* ─── Active nav links on scroll ─── */
+      const sections = document.querySelectorAll('.menu-section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const topOffset = 41 + 52 + 40;
+
+      window.addEventListener('scroll', () => {
+         const scrollY = window.scrollY + topOffset;
+         sections.forEach(sec => {
+            if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+               const id = sec.id;
+               navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+            }
+         });
+      }, { passive: true });
+
+      /* ─── Mobile nav toggle ─── */
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinksWrap = document.getElementById('nav-links');
+      navToggle.addEventListener('click', () => navLinksWrap.classList.toggle('open'));
+      navLinksWrap.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinksWrap.classList.remove('open')));
+
+      /* ─── Language toggle ─── */
+      const savedLang = localStorage.getItem('lang') || 'de';
+      applyLang(savedLang);
+      document.getElementById('btn-de').addEventListener('click', () => { applyLang('de'); localStorage.setItem('lang', 'de'); });
+      document.getElementById('btn-en').addEventListener('click', () => { applyLang('en'); localStorage.setItem('lang', 'en'); });
+
+      function applyLang(l) {
+         document.getElementById('btn-de').classList.toggle('active', l === 'de');
+         document.getElementById('btn-en').classList.toggle('active', l === 'en');
+         document.documentElement.lang = l;
+         document.querySelectorAll('[data-de][data-en]').forEach(el => {
+            const val = el.getAttribute('data-' + l);
+            if (val) el.innerHTML = val;
+         });
+      }
+   </script>
 </body>
 
 </html>
