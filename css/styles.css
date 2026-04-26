@@ -16,13 +16,13 @@
   --serif:        "Cormorant Garamond", Georgia, serif;
   --sans:         "Montserrat", system-ui, sans-serif;
   --ease:         cubic-bezier(0.25,0.1,0.25,1);
-  --utility-h:    41px;
-  --navbar-h:     52px;
+  --utility-h:    52px;
+  --navbar-h:     65px;
 }
 
 /*=============== RESET ===============*/
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 20px; }
 body {
   background: var(--bg);
   color: var(--text);
