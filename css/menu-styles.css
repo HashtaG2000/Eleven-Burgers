@@ -365,6 +365,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-shrink: 0;
   letter-spacing: 0.04em;
 }
+.item-allergens {
+  display: block;
+  font-size: 13px;
+  color: var(--dim);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+.category-note {
+  display: block;
+  font-size: 16px;
+  color: var(--dim);
+  font-style: italic;
+  margin-bottom: 14px;
+}
 
 /* ── Addons Grid ── */
 .addons-grid {
