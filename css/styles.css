@@ -221,23 +221,23 @@ address { font-style: normal; }
   justify-content: center;
 }
 .hero-video-placeholder-inner {
-  opacity: 0.12;
+  opacity: 0.4;
   text-align: center;
 }
 .hero-video-placeholder-inner img {
   width: 280px;
   margin: 0 auto;
-  filter: brightness(0.6);
+  filter: brightness(0.85);
 }
 
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(
     to top,
-    rgba(8,8,7,0.92) 0%,
-    rgba(8,8,7,0.55) 35%,
-    rgba(8,8,7,0.15) 70%,
-    rgba(8,8,7,0.05) 100%
+    rgba(8,8,7,0.85) 0%,
+    rgba(8,8,7,0.4) 35%,
+    rgba(8,8,7,0.1) 70%,
+    rgba(8,8,7,0.02) 100%
   );
 }
 
