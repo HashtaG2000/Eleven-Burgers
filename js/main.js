@@ -40,17 +40,18 @@ if (navToggle) {
   navToggle.addEventListener('click', () => navLinksWrap.classList.toggle('open'));
 }
 if (navLinksWrap) {
-  navLinksWrap.querySelectorAll('.nav-link').forEach(l => {
+  navLinksWrap.querySelectorAll('.nav-link, .mobile-ctas a').forEach(l => {
     l.addEventListener('click', () => navLinksWrap.classList.remove('open'));
   });
 }
 
 /* ─── Language toggle ─── */
+const btnDe = document.getElementById('btn-de');
+const btnEn = document.getElementById('btn-en');
+
 const savedLang = localStorage.getItem('lang') || 'de';
 applyLang(savedLang);
 
-const btnDe = document.getElementById('btn-de');
-const btnEn = document.getElementById('btn-en');
 if (btnDe) btnDe.addEventListener('click', () => { applyLang('de'); localStorage.setItem('lang', 'de'); });
 if (btnEn) btnEn.addEventListener('click', () => { applyLang('en'); localStorage.setItem('lang', 'en'); });
 

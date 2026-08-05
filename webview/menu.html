@@ -42,6 +42,10 @@
          <a class="nav-link" href="#pommes" data-de="Pommes" data-en="Fries">Pommes</a>
          <a class="nav-link" href="#getranke" data-de="Getränke" data-en="Drinks">Getränke</a>
          <a class="nav-link" href="#dessert" data-de="Dessert" data-en="Dessert">Dessert</a>
+         <div class="mobile-ctas">
+            <a href="../index.html" class="back-btn" data-de="← Zurück" data-en="← Back">← Zurück</a>
+            <a href="tel:+4922171732502" class="btn-reserv" data-de="Reservieren" data-en="Reserve">Reservieren</a>
+         </div>
       </div>
    </nav>
 
@@ -1216,7 +1220,7 @@
       const navToggle = document.getElementById('nav-toggle');
       const navLinksWrap = document.getElementById('nav-links');
       navToggle.addEventListener('click', () => navLinksWrap.classList.toggle('open'));
-      navLinksWrap.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navLinksWrap.classList.remove('open')));
+      navLinksWrap.querySelectorAll('.nav-link, .mobile-ctas a').forEach(l => l.addEventListener('click', () => navLinksWrap.classList.remove('open')));
 
       /* ─── Language toggle ─── */
       const savedLang = localStorage.getItem('lang') || 'de';
