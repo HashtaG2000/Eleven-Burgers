@@ -100,7 +100,9 @@ address { font-style: normal; }
   white-space: nowrap;
 }
 
-.header-ctas { display: flex; align-items: center; gap: 10px; justify-self: end; }
+.utility-right { display: flex; align-items: center; gap: 14px; justify-self: end; }
+
+.header-ctas { display: flex; align-items: center; gap: 10px; }
 
 .mobile-ctas { display: none; }
 
@@ -968,14 +970,7 @@ address { font-style: normal; }
     border-bottom: none;
     overflow: visible;
   }
-  .nav-toggle {
-    display: flex;
-    position: fixed;
-    top: 0; right: 1rem;
-    height: var(--utility-h);
-    align-items: center;
-    z-index: 201;
-  }
+  .nav-toggle { display: block; }
   .nav-links-wrap {
     display: none;
     flex-direction: column;

@@ -76,11 +76,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-self: center;
 }
 
+.utility-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-self: end;
+}
+
 .header-ctas {
   display: flex;
   align-items: center;
   gap: 12px;
-  justify-self: end;
 }
 
 .mobile-ctas { display: none; }
@@ -592,14 +598,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-bottom: none;
     overflow: visible;
   }
-  .nav-toggle {
-    display: flex;
-    position: fixed;
-    top: 0; right: 1rem;
-    height: var(--utility-h);
-    align-items: center;
-    z-index: 901;
-  }
+  .nav-toggle { display: block; position: static; left: auto; }
   .header-ctas { display: none; }
   .nav-links-wrap {
     display: none;
